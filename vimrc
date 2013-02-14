@@ -4,7 +4,9 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle "gmarik/vundle"
+
 Bundle "altercation/vim-colors-solarized"
+Bundle "ecomba/vim-ruby-refactoring"
 Bundle "Align"
 Bundle "Valloric/YouCompleteMe"
 Bundle "kana/vim-textobj-user"
