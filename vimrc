@@ -5,12 +5,12 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle "gmarik/vundle"
 
-Bundle "altercation/vim-colors-solarized"
-Bundle "ecomba/vim-ruby-refactoring"
 Bundle "Align"
 Bundle "Valloric/YouCompleteMe"
-Bundle "kana/vim-textobj-user"
+Bundle "altercation/vim-colors-solarized"
+Bundle "ecomba/vim-ruby-refactoring"
 Bundle "jwhitley/vim-matchit"
+Bundle "kana/vim-textobj-user"
 Bundle "mileszs/ack.vim"
 Bundle "nelstrom/vim-textobj-rubyblock"
 Bundle "slim-template/vim-slim"
@@ -20,6 +20,7 @@ Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-rails"
 Bundle "tpope/vim-rake"
 Bundle "tpope/vim-surround"
+Bundle 'SuperTab'
 
 Bundle 'Command-T'
 let g:CommandTMaxHeight=20
