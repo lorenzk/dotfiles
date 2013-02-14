@@ -83,7 +83,7 @@ set guioptions-=T
 " disable mouse-over pop-ups
 set noballooneval
 
-color solarized " ir_black
+colo solarized
 set columns=170
 set guifont=Monaco:h13.00
 

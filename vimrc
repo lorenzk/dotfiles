@@ -73,8 +73,9 @@ set backspace=indent,eol,start
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
-" Default color scheme
-color desert
+" Use solarized, fall back on desert
+colo desert
+colo solarized
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -110,3 +111,9 @@ set wildignore+=vendor
 
 " do not show me white space at EOL
 set nolist
+
+" Write with sudo (because I always forget using visudo)
+command Wsudo w !sudo tee % > /dev/null
+
+" Allow saving with :W (typo)
+command W w
