@@ -115,7 +115,7 @@ set wildignore+=vendor
 set nolist
 
 " Write with sudo (because I always forget using visudo)
-command Wsudo w !sudo tee % > /dev/null
+command! Wsudo w !sudo tee % > /dev/null
 
 " Allow saving with :W (typo)
-command W w
+command! W w
