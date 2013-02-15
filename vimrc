@@ -35,6 +35,9 @@ set clipboard=unnamed
 
 let mapleader=","
 
+" quickly edit $MYVIMRC
+nmap <leader>ev :e $MYVIMRC<CR>
+
 " Set encoding
 set encoding=utf-8
 
@@ -45,6 +48,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
+set nolist " do not show me white space at EOL
 
 " Searching
 set hlsearch
@@ -110,9 +114,6 @@ set wildignore+=log
 set wildignore+=solr
 set wildignore+=tmp
 set wildignore+=vendor
-
-" do not show me white space at EOL
-set nolist
 
 " Write with sudo (because I always forget using visudo)
 command! Wsudo w !sudo tee % > /dev/null
