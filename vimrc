@@ -5,15 +5,17 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle "gmarik/vundle"
 
-Bundle "altercation/vim-colors-solarized"
-Bundle "ecomba/vim-ruby-refactoring"
 Bundle "Align"
 Bundle "Valloric/YouCompleteMe"
-Bundle "kana/vim-textobj-user"
+Bundle "altercation/vim-colors-solarized"
+Bundle "ecomba/vim-ruby-refactoring"
 Bundle "jwhitley/vim-matchit"
+Bundle "kana/vim-textobj-user"
+Bundle "kchmck/vim-coffee-script"
 Bundle "mileszs/ack.vim"
 Bundle "nelstrom/vim-textobj-rubyblock"
 Bundle "slim-template/vim-slim"
+Bundle "tComment"
 Bundle "tpope/vim-bundler"
 Bundle "tpope/vim-endwise"
 Bundle "tpope/vim-fugitive"
@@ -36,7 +38,11 @@ set clipboard=unnamed
 let mapleader=","
 
 " quickly edit $MYVIMRC
-nmap <leader>ev :e $MYVIMRC<CR>
+nmap <leader>ev :tab drop $MYVIMRC<CR>
+nmap <leader>ep :tab drop ~/.profile<CR>
+
+" refresh CommandT file list
+nmap <Leader>ctf :CommandTFlush<CR>
 
 " Set encoding
 set encoding=utf-8
