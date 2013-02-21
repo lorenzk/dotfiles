@@ -1,10 +1,11 @@
-" Bootstrap Vundle
-if !isdirectory(expand(root, 1).'/vundle')
-  exec '!git clone '.src.' '.shellescape(root, 1).'/vundle'
-endif
-
 set nocompatible               " be iMproved
 filetype off                   " required!
+
+if !isdirectory(expand("~/.vim/bundle/vundle"))
+  !mkdir -p ~/.vim/bundle
+  !git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  let s:bootstrap=1
+endif
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -34,6 +35,11 @@ let g:CommandTMaxHeight=20
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
 nmap <Leader>ctf :CommandTFlush<CR>
+
+if exists("s:bootstrap") && s:bootstrap
+  unlet s:bootstrap
+  BundleInstall
+endif
 
 set number
 set ruler
@@ -83,7 +89,7 @@ set laststatus=2
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
+        \| exe "normal g'\"" | endif
 endif
 
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Procfile,config.ru} set ft=ruby
