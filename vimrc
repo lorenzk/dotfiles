@@ -27,6 +27,7 @@ Bundle 'Command-T'
 let g:CommandTMaxHeight=20
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
+nmap <Leader>ctf :CommandTFlush<CR>
 
 set number
 set ruler
@@ -37,12 +38,12 @@ set clipboard=unnamed
 
 let mapleader=","
 
-" quickly edit $MYVIMRC
-nmap <leader>ev :tab drop $MYVIMRC<CR>
+nmap <Leader>f :Ack<space>
+nmap <leader>eg :tab drop $MYGVIMRC<CR>
 nmap <leader>ep :tab drop ~/.profile<CR>
-
-" refresh CommandT file list
-nmap <Leader>ctf :CommandTFlush<CR>
+nmap <leader>ev :tab drop $MYVIMRC<CR>
+nmap <leader>n :nohlsearch<CR>
+nmap <leader>rn :exec &number==&relativenumber? "set number!" : "set relativenumber!"<CR>
 
 " Set encoding
 set encoding=utf-8
