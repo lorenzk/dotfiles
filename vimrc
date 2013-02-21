@@ -1,3 +1,8 @@
+" Bootstrap Vundle
+if !isdirectory(expand(root, 1).'/vundle')
+  exec '!git clone '.src.' '.shellescape(root, 1).'/vundle'
+endif
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 
