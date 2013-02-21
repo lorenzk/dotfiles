@@ -45,7 +45,10 @@ nmap <leader>ep :tab drop ~/.profile<CR>
 nmap <leader>ev :tab drop $MYVIMRC<CR>
 nmap <leader>n :nohlsearch<CR>
 nmap <leader>rn :exec &number==&relativenumber? "set number!" : "set relativenumber!"<CR>
-nmap <leader>w :w<CR>
+
+" Use ENTER to save files and remind me, too
+nmap <CR> :write<CR>
+cabbrev w nope
 
 " Set encoding
 set encoding=utf-8
