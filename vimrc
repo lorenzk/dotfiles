@@ -15,6 +15,7 @@ Bundle "Align"
 Bundle "Valloric/YouCompleteMe"
 Bundle "altercation/vim-colors-solarized"
 Bundle "ecomba/vim-ruby-refactoring"
+Bundle "goldfeld/vim-seek"
 Bundle "jwhitley/vim-matchit"
 Bundle "kana/vim-textobj-user"
 Bundle "kchmck/vim-coffee-script"
@@ -90,7 +91,20 @@ set laststatus=2
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
         \| exe "normal g'\"" | endif
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 endif
+
+if has("autocmd") && exists("+omnifunc") 
+  autocmd Filetype * 
+        \	if &omnifunc == "" | 
+        \	 setlocal omnifunc=syntaxcomplete#Complete | 
+        \	endif 
+endif 
 
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Procfile,config.ru} set ft=ruby
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
