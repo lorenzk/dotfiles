@@ -10,6 +10,9 @@ if has("gui_macvim")
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
+  " Disables CMD-S for saving
+  macmenu File.Save key=<C-D-S>
+
   " Command-Shift-F for Ack
   map <D-F> :Ack<space>
 

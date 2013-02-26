@@ -58,7 +58,6 @@ nmap <leader>rn :exec &number==&relativenumber? "set number!" : "set relativenum
 
 " Use ENTER to save files and remind me, too
 nmap <CR> :write<CR>
-noremap <D-s> nope<CR>
 cabbrev w nope
 
 " Set encoding
