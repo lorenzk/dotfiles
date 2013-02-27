@@ -1,5 +1,6 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
+let mapleader=","
 
 if !isdirectory(expand("~/.vim/bundle/vundle"))
   !mkdir -p ~/.vim/bundle
@@ -46,8 +47,6 @@ syntax on
 
 " use MacOS clipboard
 set clipboard=unnamed
-
-let mapleader=","
 
 nmap <Leader>f :Ack<space>
 nmap <leader>eg :tab drop $MYGVIMRC<CR>
