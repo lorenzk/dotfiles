@@ -12,6 +12,7 @@ if has("gui_macvim")
 
   " Disables CMD-S for saving
   macmenu File.Save key=<C-D-S>
+  map <D-s> <Nop>
 
   " Command-Shift-F for Ack
   map <D-F> :Ack<space>
