@@ -55,6 +55,9 @@ nmap <leader>ev :tab drop $MYVIMRC<CR>
 nmap <leader>n :nohlsearch<CR>
 nmap <leader>rn :exec &number==&relativenumber? "set number!" : "set relativenumber!"<CR>
 
+" use ag instead of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " Use ENTER to save files and remind me, too
 nmap <CR> :write<CR>
 
