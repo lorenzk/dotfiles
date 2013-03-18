@@ -81,7 +81,7 @@ set smartcase
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.png,*.jpg,*.gif
 
 " Status bar
 set laststatus=2
@@ -120,6 +120,9 @@ colo desert
 colo solarized
 
 " Directories for swp files
+if !isdirectory(expand("~/.vim/backup"))
+  !mkdir -p ~/.vim/backup
+endif
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
