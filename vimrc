@@ -30,11 +30,9 @@ Bundle "tpope/vim-rails"
 Bundle "tpope/vim-rake"
 Bundle "tpope/vim-surround"
 
-Bundle 'Command-T'
-let g:CommandTMaxHeight=20
-let g:CommandTAcceptSelectionMap = '<C-t>'
-let g:CommandTAcceptSelectionTabMap = '<CR>'
-nmap <Leader>ctf :CommandTFlush<CR>
+Bundle 'ctrlp.vim'
+let g:ctrlp_open_new_file = 't'
+let g:ctrlp_open_multiple_files = 'trj'
 
 if exists("s:bootstrap") && s:bootstrap
   unlet s:bootstrap
@@ -106,7 +104,6 @@ if has("autocmd") && exists("+omnifunc")
 endif 
 
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Procfile,config.ru} set ft=ruby
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 au BufRead,BufNewFile *.json set ft=javascript
 
 " allow backspacing over everything in insert mode
