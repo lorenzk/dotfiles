@@ -26,11 +26,9 @@ Bundle "tComment"
 Bundle "tpope/vim-bundler"
 Bundle "tpope/vim-endwise"
 Bundle "tpope/vim-fugitive"
+Bundle "tpope/vim-rails"
 Bundle "tpope/vim-rake"
 Bundle "tpope/vim-surround"
-
-Bundle "tpope/vim-rails"
-set iskeyword-=_ " separate on underscores
 
 Bundle 'Command-T'
 let g:CommandTMaxHeight=20
