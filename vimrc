@@ -26,13 +26,15 @@ Bundle "tComment"
 Bundle "tpope/vim-bundler"
 Bundle "tpope/vim-endwise"
 Bundle "tpope/vim-fugitive"
-Bundle "tpope/vim-rails"
 Bundle "tpope/vim-rake"
 Bundle "tpope/vim-surround"
 
+Bundle "tpope/vim-rails"
+set iskeyword-=_ " separate on underscores
+
 Bundle 'ctrlp.vim'
 let g:ctrlp_open_new_file = 't'
-let g:ctrlp_open_multiple_files = 'trj'
+let g:ctrlp_open_multiple_files = 't'
 
 if exists("s:bootstrap") && s:bootstrap
   unlet s:bootstrap
