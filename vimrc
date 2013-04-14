@@ -151,7 +151,6 @@ set wildignore+=autotest
 set wildignore+=bundeled/**
 set wildignore+=coverage/**
 set wildignore+=log
-set wildignore+=solr
 set wildignore+=tmp
 set wildignore+=vendor
 
