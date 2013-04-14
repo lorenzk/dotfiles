@@ -23,14 +23,15 @@ Bundle "mileszs/ack.vim"
 Bundle "nelstrom/vim-textobj-rubyblock"
 Bundle "slim-template/vim-slim"
 Bundle "tComment"
+Bundle "terryma/vim-multiple-cursors"
 Bundle "tpope/vim-bundler"
 Bundle "tpope/vim-endwise"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-rails"
 Bundle "tpope/vim-rake"
 Bundle "tpope/vim-surround"
-
 Bundle 'Command-T'
+
 let g:CommandTMaxHeight=20
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
