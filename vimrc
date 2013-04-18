@@ -33,6 +33,12 @@ Bundle "tpope/vim-rake"
 Bundle "tpope/vim-surround"
 Bundle 'Command-T'
 
+Bundle "thoughtbot/vim-rspec"
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+let g:rspec_command = "!ssh epic@epic-localvm 'cd source && SPRING_TMP_PATH=/tmp spring rspec {spec}'"
+
 let g:CommandTMaxHeight=20
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
