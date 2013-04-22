@@ -30,14 +30,12 @@ Bundle "tpope/vim-endwise"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-rails"
 Bundle "tpope/vim-rake"
+Bundle "tpope/vim-repeat"
 Bundle "tpope/vim-surround"
 Bundle 'Command-T'
 
-Bundle "thoughtbot/vim-rspec"
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-let g:rspec_command = "!ssh epic@epic-localvm 'cd source && SPRING_TMP_PATH=/tmp spring rspec {spec}'"
+Bundle "tpope/vim-dispatch"
+nnoremap <F9> :Dispatch<CR>
 
 let g:CommandTMaxHeight=20
 let g:CommandTAcceptSelectionMap = '<C-t>'
