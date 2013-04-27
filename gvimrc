@@ -2,11 +2,6 @@ if has("gui_macvim")
   " Fullscreen takes up entire screen
   set fuoptions=maxhorz,maxvert
 
-  " Command-T for CommandT
-  macmenu &File.New\ Tab key=<D-T>
-  map <D-t> :CommandT<CR>
-  imap <D-t> <Esc>:CommandT<CR>
-
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
@@ -45,9 +40,6 @@ if has("gui_macvim")
   map <D-M-Left> <C-w>h
   imap <D-M-Left> <C-w>h
 else
-  " Ctrl-T for Command-T
-  map <C-t> :CommandT<CR>
-  imap <C-t> <Esc>:CommandT<CR>
 
   " Ctrl-Shift-F for Ack
   map <C-F> :Ack<space>
