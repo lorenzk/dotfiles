@@ -59,7 +59,7 @@ nmap <leader>rn :exec &number==&relativenumber? 'set number!' : 'set relativenum
 " use ag instead of ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" Use ENTER to save files and remind me, too
+" Use ENTER to save files
 nmap <CR> :write<CR>
 
 " Set encoding
