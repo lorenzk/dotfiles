@@ -36,6 +36,7 @@ Bundle 'tpope/vim-surround'
 
 Bundle 'tpope/vim-dispatch'
 nnoremap <F9> :Dispatch<CR>
+autocmd FileType ruby let b:dispatch = "ssh epic@epic-localvm 'cd source && SPRING_TMP_PATH=/tmp spring rspec %'"
 
 if exists('s:bootstrap') && s:bootstrap
   unlet s:bootstrap
@@ -106,7 +107,8 @@ if has('autocmd') && exists('+omnifunc')
         \	endif 
 endif 
 
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Procfile,config.ru} set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Procfile,Capfile,config.ru} set ft=ruby
+au BufRead,BufNewFile *.thor set ft=ruby
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 au BufRead,BufNewFile *.json set ft=javascript
 
