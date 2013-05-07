@@ -108,7 +108,7 @@ if has('autocmd') && exists('+omnifunc')
 endif 
 
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Procfile,Capfile,config.ru} set ft=ruby
-au BufRead,BufNewFile *.thor set ft=ruby
+au BufRead,BufNewFile *.{thor,sinew} set ft=ruby
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 au BufRead,BufNewFile *.json set ft=javascript
 
