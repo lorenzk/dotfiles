@@ -23,6 +23,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'lparry/vim-iterm-rspec'
 Bundle 'mileszs/ack.vim'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'rizzatti/funcoo.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'tComment'
 Bundle 'terryma/vim-multiple-cursors'
@@ -33,6 +34,10 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+
+Bundle 'rizzatti/dash.vim'
+let g:dash_map = { 'ruby': 'rails' }
+:nmap <silent> <leader>d <Plug>DashSearch
 
 Bundle 'tpope/vim-dispatch'
 nnoremap <F9> :Dispatch<CR>
