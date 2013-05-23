@@ -13,6 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'Align'
+Bundle 'The-NERD-tree'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ctrlp.vim'
