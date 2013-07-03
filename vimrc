@@ -13,7 +13,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'Align'
-Bundle 'The-NERD-tree'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ctrlp.vim'
@@ -35,6 +34,9 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+
+Bundle 'The-NERD-tree'
+map <C-n> :NERDTreeToggle<CR>
 
 Bundle 'rizzatti/dash.vim'
 let g:dash_map = { 'ruby': 'rails' }
