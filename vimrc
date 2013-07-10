@@ -168,3 +168,6 @@ command! Wsudo w !sudo tee % > /dev/null
 
 " Allow saving with :W (typo)
 command! W w
+
+" new splits should be on the right
+set splitright
