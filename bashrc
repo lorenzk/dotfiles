@@ -23,6 +23,7 @@ alias o=open
 alias p=ping
 alias psg="ps ax | grep -v grep | grep"
 alias pw="ping web.de"
+alias vim='mvim -v'
 
 set -o vi
 
