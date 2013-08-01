@@ -36,7 +36,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 
 Bundle 'The-NERD-tree'
-map <C-n> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
 
 Bundle 'rizzatti/dash.vim'
 let g:dash_map = { 'ruby': 'rails' }
