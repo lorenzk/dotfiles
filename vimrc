@@ -59,9 +59,10 @@ syntax on
 set clipboard=unnamed
 
 nmap <Leader>f :Ack<space>
-nmap <leader>eg :tab drop $MYGVIMRC<CR>
-nmap <leader>ep :tab drop ~/.profile<CR>
-nmap <leader>ev :tab drop $MYVIMRC<CR>
+nmap <leader>eg :e $MYGVIMRC<CR>
+nmap <leader>ep :e ~/.profile<CR>
+nmap <leader>et :e ~/Dropbox/todo.txt<CR>
+nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>n :nohlsearch<CR>
 nmap <leader>rn :exec &number==&relativenumber? 'set number!' : 'set relativenumber!'<CR>
 
@@ -91,7 +92,7 @@ set smartcase
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.png,*.jpg,*.gif
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.png,*.jpg,*.gif,build
 
 " Status bar
 set laststatus=2
