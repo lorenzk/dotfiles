@@ -34,8 +34,10 @@ Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 
-Bundle 'The-NERD-tree'
-map <F2> :NERDTreeToggle<CR>
+Bundle 'VimOutliner'
+
+Bundle 'scrooloose/nerdtree'
+map <C-n> :NERDTreeToggle<CR>
 
 Bundle 'rizzatti/dash.vim'
 let g:dash_map = { 'ruby': 'rails' }
@@ -43,7 +45,7 @@ let g:dash_map = { 'ruby': 'rails' }
 
 Bundle 'tpope/vim-dispatch'
 nnoremap <F9> :Dispatch<CR>
-autocmd FileType ruby let b:dispatch = "ssh epic@epic-localvm 'cd source && SPRING_TMP_PATH=/tmp spring rspec %'"
+autocmd FileType ruby let b:dispatch = "spring rspec %'"
 
 if exists('s:bootstrap') && s:bootstrap
   unlet s:bootstrap
