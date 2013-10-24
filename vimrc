@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'Align'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'VimOutliner'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ctrlp.vim'
 Bundle 'ecomba/vim-ruby-refactoring'
@@ -33,8 +34,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-
-Bundle 'VimOutliner'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-notes'
 
 Bundle 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
@@ -46,6 +47,13 @@ let g:dash_map = { 'ruby': 'rails' }
 Bundle 'tpope/vim-dispatch'
 nnoremap <F9> :Dispatch<CR>
 autocmd FileType ruby let b:dispatch = "spring rspec %'"
+
+Bundle 'thoughtbot/vim-rspec'
+map <Leader>r :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "Dispatch spring rspec {spec}"
 
 if exists('s:bootstrap') && s:bootstrap
   unlet s:bootstrap
