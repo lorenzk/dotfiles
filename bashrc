@@ -38,11 +38,6 @@ export SPRING_TMP_PATH=/tmp
 if [ `uname` == "Darwin" ]; then
   alias l="ls -lFG"
 
-  # bash completion
-  if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-  fi
-
   # path setup
   export PATH=./bin:~/bin:/usr/local/bin:$PATH:/usr/local/sbin
   CDPATH=".:~:~/Projekte"
