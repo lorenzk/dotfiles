@@ -171,6 +171,7 @@ set wildignore+=bundeled/**
 set wildignore+=coverage/**
 set wildignore+=log
 set wildignore+=tmp
+set wildignore+=bundle
 
 " Write with sudo (because I always forget using visudo)
 command! Wsudo w !sudo tee % > /dev/null
