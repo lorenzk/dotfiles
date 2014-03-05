@@ -26,8 +26,6 @@ alias pw="ping web.de"
 alias vim='mvim -v'
 alias timer='echo Stop timer with CTRL-D && date && time cat && date'
 
-set -o vi
-
 export EDITOR=vi
 export HISTFILESIZE=10000
 export PROMPT_COMMAND="history -a; history -n;${PROMPT_COMMAND}"
