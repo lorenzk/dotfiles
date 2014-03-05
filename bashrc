@@ -36,6 +36,7 @@ export SPRING_TMP_PATH=/tmp
 ##### MAC ONLY #####################################################
 if [ `uname` == "Darwin" ]; then
   alias l="ls -lFG"
+  alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
 
   # bash completion
   if [ -f `brew --prefix`/etc/bash_completion ]; then
