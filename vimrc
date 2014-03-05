@@ -67,7 +67,8 @@ syntax on
 " use MacOS clipboard
 set clipboard=unnamed
 
-nmap <Leader>f :Ack<space>
+nmap <Leader>f :Ack!<space>
+nmap <leader>c :ccl<CR>
 nmap <leader>eg :e $MYGVIMRC<CR>
 nmap <leader>ep :e ~/.profile<CR>
 nmap <leader>et :e ~/Dropbox/todo.txt<CR>
@@ -194,3 +195,7 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+
+" Jump to next keyword with K
+autocmd FileType vim setlocal keywordprg=:help nojoinspaces
+autocmd FileType help setlocal keywordprg=:help nojoinspaces
