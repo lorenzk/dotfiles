@@ -22,7 +22,7 @@ alias myip="curl icanhazip.com"
 alias o=open
 alias p=ping
 alias psg="ps ax | grep -v grep | grep"
-alias pw="ping web.de"
+alias pw="ping -c 10 -i 0.1 web.de"
 alias vim='mvim -v'
 alias timer='echo Stop timer with CTRL-D && date && time cat && date'
 
