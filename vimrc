@@ -34,6 +34,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+Bundle 'vim-slim'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
 
@@ -49,8 +50,8 @@ nnoremap <F9> :Dispatch<CR>
 autocmd FileType ruby let b:dispatch = "spring rspec %'"
 
 Bundle 'thoughtbot/vim-rspec'
-map <Leader>r :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>r :w<CR>:call RunCurrentSpecFile()<CR>
+map <Leader>s :w<CR>:call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = "Dispatch spring rspec {spec}"
@@ -129,6 +130,7 @@ endif
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Procfile,Capfile,config.ru} set ft=ruby
 au BufRead,BufNewFile *.{thor,sinew} set ft=ruby
 au BufRead,BufNewFile *.json set ft=javascript
+au BufRead,BufNewFile *.slim set ft=slim
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
