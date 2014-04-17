@@ -20,12 +20,12 @@ alias la="l -a"
 alias less="less -R" # -R for colors
 alias myip="curl icanhazip.com"
 alias o=open
-alias p=ping
+alias p="ping -c 10 -i 0.1"
 alias psg="ps ax | grep -v grep | grep"
 alias pw="ping -c 10 -i 0.1 web.de"
 alias vim='mvim -v'
 alias timer='echo Stop timer with CTRL-D && date && time cat && date'
-alias wifi='sudo ifconfig en0 down && sudo ifconfig en0 up'
+alias wifi='sudo ifconfig en0 down && sleep 1 && sudo ifconfig en0 up'
 
 export EDITOR=vi
 export HISTFILESIZE=10000
