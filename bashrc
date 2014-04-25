@@ -23,7 +23,6 @@ alias o=open
 alias p="ping -c 10 -i 0.1"
 alias psg="ps ax | grep -v grep | grep"
 alias pw="ping -c 10 -i 0.1 web.de"
-alias vim='mvim -v'
 alias timer='echo Stop timer with CTRL-D && date && time cat && date'
 alias wifi='sudo ifconfig en0 down && sleep 1 && sudo ifconfig en0 up'
 
@@ -38,6 +37,7 @@ export SPRING_TMP_PATH=/tmp
 if [ `uname` == "Darwin" ]; then
   alias l="ls -lFG"
   alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
+  alias vim='mvim -v'
 
   # bash completion
   if [ -f `brew --prefix`/etc/bash_completion ]; then
