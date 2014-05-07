@@ -22,7 +22,6 @@ Bundle 'jwhitley/vim-matchit'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'lparry/vim-iterm-rspec'
-Bundle 'mileszs/ack.vim'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'slim-template/vim-slim'
@@ -37,6 +36,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-slim'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
+
+Bundle 'mileszs/ack.vim'
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 Bundle 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
@@ -68,7 +70,7 @@ syntax on
 " use MacOS clipboard
 set clipboard=unnamed
 
-nmap <Leader>f :Ack!<space>
+nmap <Leader>f :Ag!<space>
 nmap <leader>c :ccl<CR>
 nmap <leader>eg :e $MYGVIMRC<CR>
 nmap <leader>ep :e ~/.profile<CR>
