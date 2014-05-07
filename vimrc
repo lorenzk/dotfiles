@@ -77,9 +77,6 @@ nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>n :nohlsearch<CR>
 nmap <leader>rn :exec &number==&relativenumber? 'set number!' : 'set relativenumber!'<CR>
 
-" use ag instead of ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
 " Use ENTER to save files
 nmap <CR> :write<CR>
 
@@ -166,7 +163,7 @@ set textwidth=0
 " faster colon
 nnoremap <Space> :
 
-" ignore for CMD-T plugin
+" ignore for ctrlp
 set wildignore+=.*/**
 set wildignore+=_*/**
 set wildignore+=autotest
@@ -175,6 +172,7 @@ set wildignore+=coverage/**
 set wildignore+=log
 set wildignore+=tmp
 set wildignore+=bundle
+set wildignore+=js-build/**
 
 " Write with sudo (because I always forget using visudo)
 command! Wsudo w !sudo tee % > /dev/null
