@@ -28,7 +28,6 @@ alias wifi='sudo ifconfig en0 down && sleep 1 && sudo ifconfig en0 up'
 
 export EDITOR=vi
 export HISTFILESIZE=10000
-export PROMPT_COMMAND="history -a; history -n;${PROMPT_COMMAND}"
 shopt -s histappend
 export SPRING_TMP_PATH=/tmp
 
