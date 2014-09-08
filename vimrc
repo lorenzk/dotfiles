@@ -21,7 +21,7 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'jwhitley/vim-matchit'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'lparry/vim-iterm-rspec'
+"Bundle 'lparry/vim-iterm-rspec'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'slim-template/vim-slim'
@@ -33,7 +33,6 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'vim-slim'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
 
@@ -49,14 +48,21 @@ let g:dash_map = { 'ruby': 'rails' }
 
 Bundle 'tpope/vim-dispatch'
 nnoremap <F9> :Dispatch<CR>
-autocmd FileType ruby let b:dispatch = "spring rspec %'"
+autocmd FileType ruby let b:dispatch = "be spring testunit %"
 
-Bundle 'thoughtbot/vim-rspec'
-map <Leader>r :w<CR>:call RunCurrentSpecFile()<CR>
-map <Leader>s :w<CR>:call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "Dispatch spring rspec {spec}"
+Bundle 'janx/vim-rubytest'
+let g:rubytest_in_quickfix = 0
+let g:rubytest_cmd_test = "bundle exec spring testunit %p"
+let g:rubytest_cmd_testcase = "bundle exec spring testunit %p -n '/%c/'"
+let g:rubytest_cmd_spec = "bundle exec spring rspec -f specdoc %p"
+let g:rubytest_cmd_example = "bundle exec spring rspec -f specdoc %p -e '%c'"
+
+"Bundle 'thoughtbot/vim-rspec'
+"map <Leader>r :w<CR>:call RunCurrentSpecFile()<CR>
+"map <Leader>s :w<CR>:call RunNearestSpec()<CR>
+"map <Leader>l :call RunLastSpec()<CR>
+"map <Leader>a :call RunAllSpecs()<CR>
+"let g:rspec_command = "Dispatch be spring rspec {spec}"
 
 if exists('s:bootstrap') && s:bootstrap
   unlet s:bootstrap
