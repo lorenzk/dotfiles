@@ -12,16 +12,17 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
+"Bundle 'lparry/vim-iterm-rspec'
 Bundle 'Align'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'VimOutliner'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ctrlp.vim'
 Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'henrik/vim-yaml-flattener'
 Bundle 'jwhitley/vim-matchit'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kchmck/vim-coffee-script'
-"Bundle 'lparry/vim-iterm-rspec'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'slim-template/vim-slim'
@@ -51,11 +52,11 @@ nnoremap <F9> :Dispatch<CR>
 autocmd FileType ruby let b:dispatch = "be spring testunit %"
 
 Bundle 'janx/vim-rubytest'
-let g:rubytest_in_quickfix = 0
-let g:rubytest_cmd_test = "bundle exec spring testunit %p"
-let g:rubytest_cmd_testcase = "bundle exec spring testunit %p -n '/%c/'"
-let g:rubytest_cmd_spec = "bundle exec spring rspec -f specdoc %p"
-let g:rubytest_cmd_example = "bundle exec spring rspec -f specdoc %p -e '%c'"
+let g:rubytest_in_quickfix = 1
+let g:rubytest_cmd_test = "spring testunit %p"
+let g:rubytest_cmd_testcase = "spring testunit %p -n '/%c/'"
+let g:rubytest_cmd_spec = "spring rspec -f specdoc %p"
+let g:rubytest_cmd_example = "spring rspec -f specdoc %p -e '%c'"
 
 "Bundle 'thoughtbot/vim-rspec'
 "map <Leader>r :w<CR>:call RunCurrentSpecFile()<CR>
