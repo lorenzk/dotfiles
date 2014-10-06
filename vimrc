@@ -51,7 +51,7 @@ nnoremap <F9> :Dispatch<CR>
 autocmd FileType ruby let b:dispatch = "be spring testunit %"
 
 Bundle 'janx/vim-rubytest'
-let g:rubytest_in_quickfix = 1
+let g:rubytest_in_quickfix = 0
 let g:rubytest_cmd_test = "spring testunit %p"
 let g:rubytest_cmd_testcase = "spring testunit %p -n '/%c/'"
 let g:rubytest_cmd_spec = "spring rspec -f specdoc %p"
