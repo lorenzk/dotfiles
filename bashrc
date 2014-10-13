@@ -6,6 +6,7 @@ else
 fi
 
 ##### BASH #########################################################
+alias RAT='RAILS_ENV=test'
 alias be="bundle exec"
 alias ducks="du -cks * | sort -nr | grep -v total | head -n 10"
 alias ff="find . -name"
