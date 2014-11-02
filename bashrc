@@ -6,6 +6,9 @@ else
 fi
 
 ##### BASH #########################################################
+alias RAD='RAILS_ENV=development'
+alias RAP='RAILS_ENV=production'
+alias RAS='RAILS_ENV=staging'
 alias RAT='RAILS_ENV=test'
 alias be="bundle exec"
 alias ducks="du -cks * | sort -nr | grep -v total | head -n 10"
