@@ -18,7 +18,9 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ctrlp.vim'
 Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'elixir-lang/vim-elixir'
 Bundle 'henrik/vim-yaml-flattener'
+Bundle 'jade.vim'
 Bundle 'jwhitley/vim-matchit'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kchmck/vim-coffee-script'
@@ -33,6 +35,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+Bundle 'vim-stylus'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
 
@@ -54,8 +57,8 @@ Bundle 'janx/vim-rubytest'
 let g:rubytest_in_quickfix = 0
 let g:rubytest_cmd_test = "spring testunit %p"
 let g:rubytest_cmd_testcase = "spring testunit %p -n '/%c/'"
-let g:rubytest_cmd_spec = "spring rspec -f specdoc %p"
-let g:rubytest_cmd_example = "spring rspec -f specdoc %p -e '%c'"
+let g:rubytest_cmd_spec = "spring rspec %p"
+let g:rubytest_cmd_example = "spring rspec %p -e '%c'"
 
 "Bundle 'thoughtbot/vim-rspec'
 "map <Leader>r :w<CR>:call RunCurrentSpecFile()<CR>
@@ -174,13 +177,15 @@ nnoremap <Space> :
 " ignore for ctrlp
 set wildignore+=.*/**
 set wildignore+=_*/**
+set wildignore+=.bundle
 set wildignore+=autotest
 set wildignore+=bundeled/**
-set wildignore+=coverage/**
-set wildignore+=log
-set wildignore+=tmp
 set wildignore+=bundle
+set wildignore+=coverage/**
 set wildignore+=js-build/**
+set wildignore+=log
+set wildignore+=node_modules
+set wildignore+=tmp
 
 " Write with sudo (because I always forget using visudo)
 command! Wsudo w !sudo tee % > /dev/null

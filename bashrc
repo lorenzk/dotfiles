@@ -49,7 +49,7 @@ if [ `uname` == "Darwin" ]; then
   fi
 
   # path setup
-  export PATH=./bin:~/bin:/usr/local/bin:$PATH:/usr/local/sbin
+  export PATH=~/bin:/usr/local/bin:$PATH:/usr/local/sbin
   CDPATH=".:~:~/Projekte"
 
   # rbenv
