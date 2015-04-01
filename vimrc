@@ -40,6 +40,16 @@ Bundle 'vim-stylus'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
 
+Plugin 'Tabular'
+" Helper for aligning table-like array as I use in Sequel-based tests.
+function! AlignTable()
+  '<,'>Tabularize /,
+  '<,'>Tabularize /[
+  '<,'>Tabularize /]
+endfunction
+vnoremap <leader>a :call AlignTable()<cr>
+nnoremap <leader>A Vi(:call AlignTable()<cr>
+
 Bundle 'mileszs/ack.vim'
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
