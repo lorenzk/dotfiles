@@ -64,20 +64,20 @@ let g:dash_map = { 'ruby': 'rails' }
 " nnoremap <F9> :Dispatch<CR>
 " autocmd FileType ruby let b:dispatch = "be rspec %"
 
-" Bundle 'janx/vim-rubytest'
-" let g:rubytest_in_quickfix = 0
-" let g:rubytest_cmd_test = "testunit %p"
-" let g:rubytest_cmd_testcase = "testunit %p -n '/%c/'"
-" let g:rubytest_cmd_spec = "bundle exec rspec %p"
-" let g:rubytest_cmd_example = "bundle exec rspec %p:%c"
+Bundle 'janx/vim-rubytest'
+let g:rubytest_in_quickfix = 0
+let g:rubytest_cmd_test = "rake test TEST=%p"
+let g:rubytest_cmd_testcase = "testunit %p -n '/%c/'"
+let g:rubytest_cmd_spec = "bundle exec rspec %p"
+let g:rubytest_cmd_example = "bundle exec rspec %p:%c"
 
-Bundle 'thoughtbot/vim-rspec'
-map <Leader>r :w<CR>:call RunCurrentSpecFile()<CR>
-map <Leader>s :w<CR>:call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "be rspec {spec}"
-let g:rspec_runner = "os_x_iterm"
+" Bundle 'thoughtbot/vim-rspec'
+" map <Leader>r :w<CR>:call RunCurrentSpecFile()<CR>
+" map <Leader>s :w<CR>:call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
+" let g:rspec_command = "be rspec {spec}"
+" let g:rspec_runner = "os_x_iterm"
 
 if exists('s:bootstrap') && s:bootstrap
   unlet s:bootstrap
