@@ -91,7 +91,7 @@ syntax on
 " use MacOS clipboard
 set clipboard=unnamed
 
-nmap <Leader>f :Ag!<space>
+nmap <Leader>f :NERDTreeFind<CR>
 nmap <leader>c :ccl<CR>
 nmap <leader>eg :e $MYGVIMRC<CR>
 nmap <leader>ep :e ~/.profile<CR>
