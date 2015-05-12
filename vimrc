@@ -26,6 +26,7 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'mtscout6/vim-cjsx'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'ngmy/vim-rubocop'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'tComment'
@@ -78,6 +79,16 @@ let g:rubytest_cmd_example = "bundle exec rspec %p:%c"
 " map <Leader>a :call RunAllSpecs()<CR>
 " let g:rspec_command = "be rspec {spec}"
 " let g:rspec_runner = "os_x_iterm"
+
+" Bundle 'scrooloose/syntastic'
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 if exists('s:bootstrap') && s:bootstrap
   unlet s:bootstrap
@@ -161,6 +172,9 @@ filetype plugin indent on
 " Use solarized, fall back on desert
 colo desert
 colo solarized
+
+" highlight everything after 80 and 120 chars
+let &colorcolumn="80,120"
 
 " Directories for swp files
 if !isdirectory(expand('~/.vim/backup'))
