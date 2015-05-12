@@ -52,9 +52,6 @@ if [ `uname` == "Darwin" ]; then
   export PATH=~/bin:./node_modules/.bin:/usr/local/bin:$PATH:/usr/local/sbin
   CDPATH=".:~:~/Projekte"
 
-  # rbenv
-  if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
   # MacVim
   mvim() { (unset GEM_PATH GEM_HOME; command mvim "$@") }
 
