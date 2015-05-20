@@ -52,25 +52,12 @@ let g:dash_map = { 'ruby': 'rails' }
 
 Plug 'janko-m/vim-test'
 let test#strategy = "neoterm"
+let g:neoterm_size = 10
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
-
-"Plug 'janx/vim-rubytest'
-"let g:rubytest_in_quickfix = 0
-"let g:rubytest_cmd_test = "rake test TEST=%p"
-"let g:rubytest_cmd_testcase = "testunit %p -n '/%c/'"
-"let g:rubytest_cmd_spec = "Plug exec rspec %p"
-"let g:rubytest_cmd_example = "Plug exec rspec %p:%c"
-
-" Plug 'thoughtbot/vim-rspec'
-" map <Leader>r :w<CR>:call RunCurrentSpecFile()<CR>
-" map <Leader>s :w<CR>:call RunNearestSpec()<CR>
-" map <Leader>l :call RunLastSpec()<CR>
-" map <Leader>a :call RunAllSpecs()<CR>
-" let g:rspec_command = "be rspec {spec}"
-" let g:rspec_runner = "os_x_iterm"
 
 Plug 'benekastah/neomake'
 autocmd! BufWritePost * Neomake
