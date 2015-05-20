@@ -197,3 +197,14 @@ set undofile            " Save undo's after file closes
 set undodir=~/.vim/undo " where to save undo histories
 set undolevels=1000     " How many undos
 set undoreload=10000    " number of lines to save for undo
+
+" Terminal
+:tnoremap <Esc> <C-\><C-n>
+:tnoremap <A-h> <C-\><C-n><C-w>h
+:tnoremap <A-j> <C-\><C-n><C-w>j
+:tnoremap <A-k> <C-\><C-n><C-w>k
+:tnoremap <A-l> <C-\><C-n><C-w>l
+:nnoremap <A-h> <C-w>h
+:nnoremap <A-j> <C-w>j
+:nnoremap <A-k> <C-w>k
+:nnoremap <A-l> <C-w>l
