@@ -5,6 +5,12 @@ else
   PS1='\[\033[01;32m\]\Ah \u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
 
+if [ $(which nvim) ]; then
+  export EDITOR=nvim
+else
+  export EDITOR=vi
+fi
+
 ##### BASH #########################################################
 alias RAD='RAILS_ENV=development'
 alias RAP='RAILS_ENV=production'
@@ -29,9 +35,9 @@ alias psg="ps ax | grep -v grep | grep"
 alias pw="ping -c 10 -i 0.1 web.de"
 alias s=spring
 alias timer='echo Stop timer with CTRL-D && date && time cat && date'
+alias vi=$EDITOR
 alias wififix='sudo ifconfig en0 down && sleep 1 && sudo ifconfig en0 up'
 
-export EDITOR=vi
 export HISTFILESIZE=10000
 shopt -s histappend
 export SPRING_TMP_PATH=/tmp
@@ -41,7 +47,6 @@ export SPRING_TMP_PATH=/tmp
 if [ `uname` == "Darwin" ]; then
   alias l="ls -lFG"
   alias bu='brew update; brew upgrade --all; brew cleanup; brew doctor'
-  alias vim='mvim -v'
 
   # bash completion
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -52,15 +57,11 @@ if [ `uname` == "Darwin" ]; then
   export PATH=~/bin:./node_modules/.bin:/usr/local/bin:$PATH:/usr/local/sbin
   CDPATH=".:~:~/Projekte"
 
-  # MacVim
-  mvim() { (unset GEM_PATH GEM_HOME; command mvim "$@") }
-
   # Amazon EC2
   export JAVA_HOME="$(/usr/libexec/java_home)"
   export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
   export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
   export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
 
-  export EDITOR="mvim -f"
   export LEDGER=~/Projekte/dkb2ledger/private.ledger
 fi
