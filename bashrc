@@ -16,7 +16,9 @@ alias RAD='RAILS_ENV=development'
 alias RAP='RAILS_ENV=production'
 alias RAS='RAILS_ENV=staging'
 alias RAT='RAILS_ENV=test'
-alias be="bundle exec"
+alias b2dinit='$(boot2docker shellinit)'
+alias be='bundle exec'
+alias dc='docker-compose'
 alias ducks="du -cks * | sort -nr | grep -v total | head -n 10"
 alias ff="find . -name"
 alias g=git
