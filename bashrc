@@ -38,6 +38,7 @@ alias pw="ping -c 10 -i 0.1 web.de"
 alias s=spring
 alias timer='echo Stop timer with CTRL-D && date && time cat && date'
 alias vi=$EDITOR
+alias vim=$EDITOR
 alias wififix='sudo ifconfig en0 down && sleep 1 && sudo ifconfig en0 up'
 
 export HISTFILESIZE=10000
