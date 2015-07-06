@@ -125,7 +125,6 @@ endif
 
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Procfile,Capfile,config.ru} set ft=ruby
 au BufRead,BufNewFile *.{thor,sinew} set ft=ruby
-au BufRead,BufNewFile *.json set ft=javascript
 au BufRead,BufNewFile *.slim set ft=slim
 
 " allow backspacing over everything in insert mode
