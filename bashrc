@@ -41,7 +41,7 @@ alias vi=$EDITOR
 alias vim=$EDITOR
 alias wififix='sudo ifconfig en0 down && sleep 1 && sudo ifconfig en0 up'
 
-export HISTFILESIZE=10000
+export HISTFILESIZE=5000
 shopt -s histappend
 export SPRING_TMP_PATH=/tmp
 
