@@ -31,6 +31,8 @@ alias l="ls -lF --color=auto"
 alias la="l -a"
 alias less="less -R" # -R for colors
 alias myip="curl icanhazip.com"
+alias naproxy="export ALL_PROXY=http://proxy.newsaktuell.de:8080 https_proxy=http://proxy.newsaktuell.de:8080 http_proxy=http://proxy.newsaktuell.de:8080"
+alias noproxy="unset ALL_PROXY https_proxy http_proxy"
 alias o=open
 alias p="ping -c 10 -i 0.1"
 alias psg="ps ax | grep -v grep | grep"
