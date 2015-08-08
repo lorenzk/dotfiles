@@ -10,7 +10,7 @@ source ~/.vim/autoload/plug.vim
 call plug#begin('~/.vim/plugged')
 
 Plug 'Align'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlp.vim'
 "Plug 'henrik/vim-yaml-flattener'        " use <Leader>r to flatten/unflatten yml files
