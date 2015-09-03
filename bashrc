@@ -43,6 +43,7 @@ alias vi=$EDITOR
 alias vim=$EDITOR
 
 export HISTFILESIZE=5000
+export HISTFILE=~/.history/`date +%Y%m%d`.hist
 shopt -s histappend
 export SPRING_TMP_PATH=/tmp
 
