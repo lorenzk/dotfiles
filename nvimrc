@@ -63,6 +63,10 @@ nmap <silent> <leader>g :TestVisit<CR>
 Plug 'benekastah/neomake'
 autocmd! BufWritePost * Neomake
 
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 call plug#end()
 
 set number
