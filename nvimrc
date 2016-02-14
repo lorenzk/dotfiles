@@ -9,11 +9,10 @@ endif
 source ~/.vim/autoload/plug.vim
 call plug#begin('~/.vim/plugged')
 
-Plug 'Align'
 "Plug 'Valloric/YouCompleteMe'
+Plug 'Align'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlp.vim'
-"Plug 'henrik/vim-yaml-flattener'        " use <Leader>r to flatten/unflatten yml files
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
 Plug 'kassio/neoterm'
@@ -28,6 +27,7 @@ Plug 'tpope/vim-fugitive'               " git
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'wavded/vim-stylus'
 
 Plug 'Tabular'
 " Helper for aligning table-like array as I use in Sequel-based tests.
