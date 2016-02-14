@@ -85,9 +85,6 @@ nmap <leader>n :nohlsearch<CR>
 " Use ENTER to save files
 nmap <CR> :write<CR>
 
-" Set encoding
-set encoding=utf-8
-
 " Whitespace stuff
 set nowrap
 set tabstop=2
@@ -143,7 +140,7 @@ filetype plugin indent on
 " Use solarized, fall back on desert
 colo desert
 colo solarized
-set bg=light
+set bg=dark
 
 " Directories for swp files
 if !isdirectory(expand('~/.vim/backup'))
