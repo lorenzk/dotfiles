@@ -26,7 +26,6 @@ alias gb="git branch"
 alias gd="git diff"
 alias grep="grep --color=auto"
 alias gs="git st"
-alias hgrep="history | grep"
 alias l="ls -lF --color=auto"
 alias la="l -a"
 alias less="less -R" # -R for colors
