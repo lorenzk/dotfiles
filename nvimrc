@@ -53,6 +53,7 @@ let g:dash_map = { 'ruby': 'rails' }
 Plug 'janko-m/vim-test'
 let test#strategy = "neoterm"
 let test#ruby#minitest#executable = 'bin/rake test'
+let test#ruby#rspec#executable = 'bin/rspec'
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
