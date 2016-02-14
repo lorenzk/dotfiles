@@ -68,4 +68,8 @@ if [ `uname` == "Darwin" ]; then
   export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
 
   export LEDGER=~/Projekte/dkb2ledger/private.ledger
+
+  [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+  . ~/.env
 fi
