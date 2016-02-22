@@ -51,6 +51,7 @@ let g:dash_map = { 'ruby': 'rails' }
 :nmap <silent> <leader>d <Plug>DashSearch
 
 Plug 'janko-m/vim-test'
+let g:neoterm_size=10
 let test#strategy = "neoterm"
 let test#ruby#minitest#executable = 'bin/rake test'
 let test#ruby#rspec#executable = 'bin/rspec'
