@@ -2,12 +2,12 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 let mapleader=','
 
-if filereadable("~/.vim/autoload/plug.vim")
-  !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if filereadable("~/.config/nvim/autoload/plug.vim")
+  !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
-source ~/.vim/autoload/plug.vim
-call plug#begin('~/.vim/plugged')
+source ~/.config/nvim/autoload/plug.vim
+call plug#begin('~/.config/nvim/plugged')
 
 "Plug 'Valloric/YouCompleteMe'
 Plug 'Align'
