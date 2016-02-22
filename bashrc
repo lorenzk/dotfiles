@@ -12,13 +12,8 @@ else
 fi
 
 ##### BASH #########################################################
-alias RAD='RAILS_ENV=development'
-alias RAP='RAILS_ENV=production'
-alias RAS='RAILS_ENV=staging'
-alias RAT='RAILS_ENV=test'
 alias b2dinit='$(boot2docker shellinit)'
 alias be='bundle exec'
-alias dc='docker-compose'
 alias ducks="du -cks * | sort -nr | grep -v total | head -n 10"
 alias ff="find . -name"
 alias g=git
@@ -30,14 +25,8 @@ alias l="ls -lF --color=auto"
 alias la="l -a"
 alias less="less -R" # -R for colors
 alias myip="curl icanhazip.com"
-alias naproxy="export ALL_PROXY=http://proxy.newsaktuell.de:8080 https_proxy=http://proxy.newsaktuell.de:8080 http_proxy=http://proxy.newsaktuell.de:8080"
-alias noproxy="unset ALL_PROXY https_proxy http_proxy"
-alias o=open
-alias p="ping -c 10 -i 0.1"
 alias psg="ps ax | grep -v grep | grep"
 alias pw="ping -c 10 -i 0.1 web.de"
-alias s=spring
-alias timer='echo Stop timer with CTRL-D && date && time cat && date'
 alias vi=$EDITOR
 alias vim=$EDITOR
 
@@ -66,8 +55,6 @@ if [ `uname` == "Darwin" ]; then
   export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
   export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
   export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
-
-  export LEDGER=~/Projekte/dkb2ledger/private.ledger
 
   [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
