@@ -8,3 +8,5 @@ alias vi nvim
 alias l "ls -lF"
 alias la "l -a"
 alias grep "grep --color=auto"
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
