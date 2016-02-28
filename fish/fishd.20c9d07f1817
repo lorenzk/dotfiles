@@ -30,5 +30,5 @@ SET fish_pager_color_completion:normal
 SET fish_pager_color_description:555\x1eyellow
 SET fish_pager_color_prefix:cyan
 SET fish_pager_color_progress:cyan
-SET fish_user_abbreviations:gco\x20git\x20checkout\x1egb\x20git\x20branch\x1egd\x20git\x20diff\x1egs\x20git\x20st
+SET fish_user_abbreviations:gco\x20git\x20checkout\x1egb\x20git\x20branch\x1egd\x20git\x20diff\x1egs\x20git\x20st\x1ebe\x20bundle\x20exec
 SET fish_user_paths:/Users/lorenz/bin
