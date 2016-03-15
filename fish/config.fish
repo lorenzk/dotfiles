@@ -9,10 +9,14 @@ alias l "ls -lF"
 alias la "l -a"
 alias grep "grep --color=auto"
 
+abbr be bundle exec
+abbr gb git branch
+abbr gco git checkout
+abbr gd git diff
+abbr gs git st
+
 set -x EDITOR nvim
 set fish_greeting
-set fish_user_abbreviations gco\x20git\x20checkout\x1egb\x20git\x20branch\x1egd\x20git\x20diff\x1egs\x20git\x20status\x1ebe\x20bundle\x20exec
-
 set fish_color_autosuggestion 586e75
 set fish_color_command 93a1a1
 set fish_color_comment 586e75
