@@ -172,6 +172,7 @@ set wildignore+=js-build/**
 set wildignore+=log
 set wildignore+=node_modules
 set wildignore+=tmp
+let g:ctrlp_user_command = ['.git', 'cd %s; and git ls-files -co --exclude-standard']
 
 " Write with sudo (because I always forget using visudo)
 command! Wsudo w !sudo tee % > /dev/null
