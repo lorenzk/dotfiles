@@ -1,7 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
 name = Lorenz Kitzmann
-email = lorenz.kitzmann@xing.com
 [push]
 	default = simple
 [alias]
