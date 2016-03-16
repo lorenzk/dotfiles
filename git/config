@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+name = Lorenz Kitzmann
+email = lorenz@lorenzkitzmann.com
+[push]
+	default = simple
+[alias]
+	co = checkout
+	st = status -sb
+	cm = commit -m
+	cam = commit -am
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
