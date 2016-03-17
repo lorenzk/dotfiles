@@ -1,11 +1,18 @@
 # This is Git's per-user configuration file.
 [user]
-name = Lorenz Kitzmann
+  name = Lorenz Kitzmann
 [push]
-	default = simple
+  default = simple
 [alias]
-	co = checkout
-	st = status -sb
-	cm = commit -m
-	cam = commit -am
+  co = checkout
+  st = status -sb
+  cm = commit -m
+  cam = commit -am
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  up = pull --ff-only -p
+[core]
+  excludesfile = ~/.gitignore
+  precomposeunicode = true
+  editor = nvim
+[credential]
+  helper = osxkeychain
