@@ -1,4 +1,4 @@
 .DS_Store
-/fish/fish_history
-/nvim/plugged
-/fish/fishd.*
+config/fish/fish_history
+config/fish/fishd.*
+config/nvim/plugged
