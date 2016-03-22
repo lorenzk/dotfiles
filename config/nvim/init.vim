@@ -83,6 +83,7 @@ nmap <leader>et :e ~/Dropbox/todo.txt<CR>
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>n :nohlsearch<CR>
 nmap <leader>cn :cn<CR>
+nmap <leader>x :T xing s s<CR>
 
 " Use ENTER to save files
 nmap <CR> :write<CR>
