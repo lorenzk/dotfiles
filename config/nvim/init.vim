@@ -94,7 +94,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set list listchars=nbsp:•,tab:>-,extends:»,precedes:«,trail:•
+set list listchars=nbsp:•,tab:\ \ ,extends:»,precedes:«,trail:·
 
 " Searching
 set hlsearch
