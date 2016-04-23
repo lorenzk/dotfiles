@@ -8,6 +8,8 @@ alias vi nvim
 alias l "ls -lF"
 alias la "l -a"
 alias grep "grep --color=auto"
+alias dark "echo -e '\033]50;SetProfile=Solarized Dark\a'"
+alias light "echo -e '\033]50;SetProfile=Solarized Light\a'"
 
 abbr be bundle exec
 abbr gb git branch

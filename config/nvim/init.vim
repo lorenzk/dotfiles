@@ -63,6 +63,7 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 Plug 'benekastah/neomake'
 autocmd! BufWritePost * Neomake
+let g:vimrubocop_extra_args='-D'
 
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
