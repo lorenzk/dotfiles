@@ -144,7 +144,7 @@ filetype plugin indent on
 " Use solarized, fall back on desert
 colo desert
 colo solarized
-set bg=dark
+set bg=light
 
 " Directories for swp files
 if !isdirectory(expand('~/.vim/backup'))
