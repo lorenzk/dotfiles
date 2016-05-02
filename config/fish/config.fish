@@ -8,8 +8,8 @@ alias vi nvim
 alias l "ls -lF"
 alias la "l -a"
 alias grep "grep --color=auto"
-alias dark "echo -e '\033]50;SetProfile=Solarized Dark\a'"
-alias light "echo -e '\033]50;SetProfile=Solarized Light\a'"
+alias dark "echo -e '\033]50;SetProfile=Solarized Dark\a'; sed -i '' 's/^set bg=.*/set bg=dark/' ~/.config/nvim/init.vim"
+alias light "echo -e '\033]50;SetProfile=Solarized Light\a'; sed -i '' 's/^set bg=.*/set bg=light/' ~/.config/nvim/init.vim"
 
 abbr be bundle exec
 abbr gb git branch
