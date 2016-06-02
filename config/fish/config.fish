@@ -1,5 +1,5 @@
 # rbenv
-status --is-interactive; and . (rbenv init -|psub)
+status --is-interactive; and which -s rbenv; and . (rbenv init -|psub)
 
 # autojump
 test -f /usr/local/share/autojump/autojump.fish; and . /usr/local/share/autojump/autojump.fish
