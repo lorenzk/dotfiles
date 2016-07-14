@@ -146,13 +146,6 @@ colo desert
 colo solarized
 set bg=light
 
-" Directories for swp files
-if !isdirectory(expand('~/.vim/backup'))
-  !mkdir -p ~/.vim/backup
-endif
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
-
 " Show (partial) command in the status line
 set showcmd
 
