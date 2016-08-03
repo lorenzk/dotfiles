@@ -15,6 +15,8 @@ abbr be bundle exec
 abbr gb git branch
 abbr gco git checkout
 abbr gd git diff
+abbr gpl git pull
+abbr gps git push
 abbr gs git st
 
 set -x EDITOR nvim
