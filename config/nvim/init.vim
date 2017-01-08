@@ -12,11 +12,12 @@ call plug#begin('~/.config/nvim/plugged')
 "Plug 'Valloric/YouCompleteMe'
 Plug 'Align'
 Plug 'altercation/vim-colors-solarized'
-Plug 'ctrlp.vim'
+Plug 'elmcast/elm-vim'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
 Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
+Plug 'leafgarland/typescript-vim'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
 Plug 'ngmy/vim-rubocop'
 Plug 'slim-template/vim-slim'
@@ -24,10 +25,17 @@ Plug 'tomtom/tcomment_vim'              " use 'gc' to comment out code
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'                " inserts 'end' in ruby
 Plug 'tpope/vim-fugitive'               " git
+Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'wavded/vim-stylus'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+let g:fzf_command_prefix = 'Fzf'
+nnoremap <c-p> :FZF<CR>
+nnoremap <c-p><c-f> :FzfBuffers<CR>
 
 Plug 'Tabular'
 " Helper for aligning table-like array as I use in Sequel-based tests.
@@ -53,8 +61,8 @@ let g:dash_map = { 'ruby': 'rails' }
 Plug 'janko-m/vim-test'
 let g:neoterm_size=10
 let test#strategy = "neoterm"
-let test#ruby#minitest#executable = 'bin/rake test'
-let test#ruby#rspec#executable = 'bin/rspec'
+let test#ruby#minitest#executable = 'rake test'
+let test#ruby#rspec#executable = 'rspec'
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
@@ -84,7 +92,6 @@ nmap <leader>et :e ~/Dropbox/todo.txt<CR>
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>n :nohlsearch<CR>
 nmap <leader>cn :cn<CR>
-nmap <leader>x :T xing s s<CR>
 
 " Use ENTER to save files
 nmap <CR> :write<CR>
@@ -144,7 +151,7 @@ filetype plugin indent on
 " Use solarized, fall back on desert
 colo desert
 colo solarized
-set bg=dark
+set bg=light
 
 " Show (partial) command in the status line
 set showcmd

@@ -60,3 +60,5 @@ if [ `uname` == "Darwin" ]; then
 
   . ~/.env
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

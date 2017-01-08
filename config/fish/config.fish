@@ -1,3 +1,4 @@
+set PATH $PATH (yarn global bin)
 # rbenv
 status --is-interactive; and which -s rbenv; and . (rbenv init -|psub)
 
@@ -20,6 +21,7 @@ abbr gps git push
 abbr gs git st
 
 set -x EDITOR nvim
+set -x FZF_DEFAULT_COMMAND 'ag -g ""'
 set fish_greeting
 set fish_color_autosuggestion 586e75
 set fish_color_command 93a1a1
