@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'Align'
 Plug 'altercation/vim-colors-solarized'
 Plug 'elmcast/elm-vim'
+Plug 'ctrlp.vim'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
 Plug 'kassio/neoterm'
@@ -30,12 +31,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'wavded/vim-stylus'
-
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-let g:fzf_command_prefix = 'Fzf'
-nnoremap <c-p> :FZF<CR>
-nnoremap <c-p><c-f> :FzfBuffers<CR>
 
 Plug 'Tabular'
 " Helper for aligning table-like array as I use in Sequel-based tests.
