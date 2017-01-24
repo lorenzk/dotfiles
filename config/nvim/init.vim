@@ -50,6 +50,7 @@ nnoremap <leader>A Vi(:call AlignTable()<cr>
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --nogroup --nocolor --column'
 map <C-F> :Ack!<space>
+vnoremap <C-F> y:Ack! <C-r>=fnameescape(@")<CR>
 
 Plug 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
