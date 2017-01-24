@@ -18,6 +18,7 @@ Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
 Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
+Plug 'lmeijvogel/vim-yaml-helper'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
 Plug 'ngmy/vim-rubocop'
 Plug 'slim-template/vim-slim'
