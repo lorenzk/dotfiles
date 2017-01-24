@@ -85,7 +85,7 @@ set ruler
 syntax on
 
 " use MacOS clipboard
-set clipboard=unnamed
+" set clipboard=unnamed
 
 nnoremap <silent> <esc><esc> :nohlsearch<CR><C-l>
 nmap <Leader>f :NERDTreeFind<CR>
