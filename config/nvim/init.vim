@@ -87,12 +87,13 @@ syntax on
 " use MacOS clipboard
 set clipboard=unnamed
 
+nnoremap <silent> <esc><esc> :nohlsearch<CR><C-l>
 nmap <Leader>f :NERDTreeFind<CR>
 nmap <leader>ep :e ~/.profile<CR>
 nmap <leader>et :e ~/Dropbox/todo.txt<CR>
 nmap <leader>ev :e $MYVIMRC<CR>
-nmap <leader>n :nohlsearch<CR>
 nmap <leader>cn :cn<CR>
+nmap <leader>r :source $MYVIMRC<CR>
 
 " Use ENTER to save files
 nmap <CR> :write<CR>
@@ -218,3 +219,7 @@ set undoreload=10000    " number of lines to save for undo
 :nnoremap <A-j> <C-w>j
 :nnoremap <A-k> <C-w>k
 :nnoremap <A-l> <C-w>l
+
+
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+inoremap kj <esc>
