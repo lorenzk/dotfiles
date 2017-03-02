@@ -13,7 +13,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'Align'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'altercation/vim-colors-solarized'
-Plug 'elmcast/elm-vim'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
 Plug 'kassio/neoterm'
@@ -32,6 +31,9 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'wavded/vim-stylus'
+
+Plug 'elmcast/elm-vim'
+let g:elm_format_autosave = 1
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
