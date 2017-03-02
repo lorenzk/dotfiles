@@ -11,6 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 "Plug 'Valloric/YouCompleteMe'
 Plug 'Align'
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'elmcast/elm-vim'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
