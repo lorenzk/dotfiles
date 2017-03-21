@@ -3,15 +3,16 @@
 [push]
   default = simple
 [alias]
-  co = checkout
-  st = status -sb
-  cm = commit -m
   cam = commit -am
+  cm = commit -m
+  co = checkout
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  prom = pull --rebase origin master
+  st = status -sb
   up = pull --ff-only
 [core]
+  editor = nvim
   excludesfile = ~/.gitignore
   precomposeunicode = true
-  editor = nvim
 [credential]
   helper = osxkeychain
