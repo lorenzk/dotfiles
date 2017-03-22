@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/plugged')
 "Plug 'Valloric/YouCompleteMe'
 Plug 'Align'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
