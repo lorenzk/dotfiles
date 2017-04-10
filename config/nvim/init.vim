@@ -9,7 +9,6 @@ endif
 source ~/.config/nvim/autoload/plug.vim
 call plug#begin('~/.config/nvim/plugged')
 
-"Plug 'Valloric/YouCompleteMe'
 Plug 'Align'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
@@ -30,8 +29,16 @@ Plug 'tpope/vim-fugitive'               " git
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'wavded/vim-stylus'
+
+Plug 'AndrewRadev/sideways.vim'
+nnoremap <c-h> :SidewaysLeft<cr>
+nnoremap <c-l> :SidewaysRight<cr>
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_at_startup = 1
 
 Plug 'elmcast/elm-vim'
 let g:elm_format_autosave = 1
