@@ -158,10 +158,8 @@ set backspace=indent,eol,start
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
-" Use solarized, fall back on desert
-colo desert
-colo solarized
-set bg=dark
+" I play around with this a lot and don't want it in my git history
+source $HOME/.config/nvim/colorscheme.vim
 
 " Show (partial) command in the status line
 set showcmd
