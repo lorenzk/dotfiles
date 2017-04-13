@@ -153,9 +153,6 @@ au BufRead,BufNewFile *.{thor,sinew,jbuilder} set ft=ruby
 au BufRead,BufNewFile *.slim set ft=slim
 au BufRead,BufNewFile *.es6 set ft=javascript
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
