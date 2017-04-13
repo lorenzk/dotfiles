@@ -20,7 +20,6 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'lmeijvogel/vim-yaml-helper'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
-Plug 'ngmy/vim-rubocop'
 Plug 'slim-template/vim-slim'
 Plug 'tomtom/tcomment_vim'              " use 'gc' to comment out code
 Plug 'tpope/vim-bundler'
@@ -85,6 +84,9 @@ Plug 'benekastah/neomake'
 autocmd! BufWritePost * Neomake
 let g:vimrubocop_extra_args='-D'
 let g:neomake_ruby_enabled_makers = ['mri']
+
+Plug 'ngmy/vim-rubocop'
+nmap <Leader>c :RuboCop -a<CR>
 
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
