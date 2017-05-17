@@ -1,6 +1,6 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
-let mapleader=','
+let mapleader=' '
 
 if filereadable("~/.config/nvim/autoload/plug.vim")
   !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -169,9 +169,6 @@ set showcmd
 
 " disables automatic wrapping in text files
 set textwidth=0
-
-" faster colon
-nnoremap <Space> :
 
 " ignore for ctrlp
 set wildignore+=.*/**
