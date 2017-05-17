@@ -17,7 +17,6 @@ Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
 Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
-Plug 'leafgarland/typescript-vim'
 Plug 'lmeijvogel/vim-yaml-helper'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
 Plug 'slim-template/vim-slim'
@@ -64,6 +63,10 @@ vnoremap <C-F> y:Ack! <C-r>=fnameescape(@")<CR>
 
 Plug 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
+
+Plug 'sbdchd/neoformat'
+autocmd BufWritePre *.js* Neoformat
+autocmd FileType javascript set formatprg=prettier\ --stdin
 
 Plug 'rizzatti/dash.vim'
 let g:dash_map = { 'ruby': 'rails' }
@@ -156,7 +159,7 @@ endif
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Capfile,config.ru} set ft=ruby
 au BufRead,BufNewFile *.{thor,sinew,jbuilder} set ft=ruby
 au BufRead,BufNewFile *.slim set ft=slim
-au BufRead,BufNewFile *.es6 set ft=javascript
+au BufRead,BufNewFile *.{es6,jsx} set ft=javascript
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
