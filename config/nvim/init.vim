@@ -76,7 +76,6 @@ Plug 'janko-m/vim-test'
 let g:neoterm_size=10
 let test#strategy = "neoterm"
 let test#ruby#minitest#executable = 'rake test'
-let test#ruby#rspec#executable = 'bundle exec rspec'
 nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
