@@ -1,6 +1,6 @@
 set PATH $PATH (yarn global bin)
 # rbenv
-status --is-interactive; and which -s rbenv; and . (rbenv init -|psub)
+status --is-interactive; and source (rbenv init -|psub)
 
 # autojump
 test -f /usr/local/share/autojump/autojump.fish; and . /usr/local/share/autojump/autojump.fish
