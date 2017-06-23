@@ -125,6 +125,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+" incrementally preview substitutions
+set icm=split
+
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.png,*.jpg,*.gif,build,*.min.js
