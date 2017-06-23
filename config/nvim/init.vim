@@ -111,9 +111,6 @@ nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>cn :cn<CR>
 nmap <leader>r :source $MYVIMRC<CR>
 
-" Use ENTER to save files
-nmap <CR> :write<CR>
-
 " Whitespace stuff
 set nowrap
 set tabstop=2
