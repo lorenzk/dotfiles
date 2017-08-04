@@ -6,8 +6,8 @@ status --is-interactive; and source (rbenv init -|psub)
 test -f /usr/local/share/autojump/autojump.fish; and . /usr/local/share/autojump/autojump.fish
 
 alias vi nvim
-alias l "ls -lF"
-alias la "l -a"
+alias l "exa --long --git"
+alias la "l --all"
 alias grep "grep --color=auto"
 
 abbr be bundle exec
