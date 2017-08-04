@@ -1,5 +1,6 @@
 [user]
   name = Lorenz Kitzmann
+  email = lorenz@lorenzk.de
 [push]
   default = simple
 [alias]
