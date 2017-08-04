@@ -105,11 +105,12 @@ syntax on
 
 nnoremap <silent> <esc><esc> :nohlsearch<CR><C-l>
 nmap <Leader>f :NERDTreeFind<CR>
+nmap <leader>cn :cn<CR>
 nmap <leader>ep :e ~/.profile<CR>
 nmap <leader>et :e ~/Dropbox/todo.txt<CR>
 nmap <leader>ev :e $MYVIMRC<CR>
-nmap <leader>cn :cn<CR>
 nmap <leader>r :source $MYVIMRC<CR>
+nmap <leader>y :!yml-sorter -i % -o %<CR>
 
 " Whitespace stuff
 set nowrap
