@@ -5,10 +5,10 @@ status --is-interactive; and source (rbenv init -|psub)
 # autojump
 test -f /usr/local/share/autojump/autojump.fish; and . /usr/local/share/autojump/autojump.fish
 
-alias vi nvim
-alias l "exa --long --git"
-alias la "l --all"
 alias grep "grep --color=auto"
+alias l "ls -oF"
+alias la "l -a"
+alias vi nvim
 
 abbr be bundle exec
 abbr gb git branch
