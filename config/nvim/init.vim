@@ -41,7 +41,7 @@ let g:deoplete#enable_at_startup = 1
 Plug 'elmcast/elm-vim'
 let g:elm_format_autosave = 1
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '/usr/local/opt/fzf' }
 Plug 'junegunn/fzf.vim'
 nnoremap <c-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
