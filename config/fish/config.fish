@@ -1,4 +1,4 @@
-set PATH $PATH (yarn global bin)
+set PATH $PATH
 # rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
