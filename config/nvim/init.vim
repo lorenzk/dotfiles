@@ -57,7 +57,7 @@ vnoremap <leader>a :call AlignTable()<cr>
 nnoremap <leader>A Vi(:call AlignTable()<cr>
 
 Plug 'mileszs/ack.vim'
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = 'rg --no-heading --column'
 map <C-F> :Ack!<space>
 vnoremap <C-F> y:Ack! <C-r>=fnameescape(@")<CR>
 
