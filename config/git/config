@@ -17,3 +17,5 @@
   precomposeunicode = true
 [credential]
   helper = osxkeychain
+[merge]
+	tool = opendiff
