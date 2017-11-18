@@ -1,4 +1,4 @@
-source /usr/local/Cellar/fzf/0.17.0/shell/key-bindings.fish
+source /usr/local/Cellar/fzf/(fzf --version | cut -f 1 -d ' ')/shell/key-bindings.fish
 
 function fish_user_key_bindings
 	fzf_key_bindings
