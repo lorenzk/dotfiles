@@ -9,10 +9,10 @@ endif
 source ~/.config/nvim/autoload/plug.vim
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'Align'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/vim-easy-align'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
 Plug 'kassio/neoterm'
@@ -45,16 +45,6 @@ Plug 'junegunn/fzf', { 'dir': '/usr/local/opt/fzf' }
 Plug 'junegunn/fzf.vim'
 nnoremap <c-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
-
-Plug 'Tabular'
-" Helper for aligning table-like array as I use in Sequel-based tests.
-function! AlignTable()
-  '<,'>Tabularize /,
-  '<,'>Tabularize /[
-  '<,'>Tabularize /]
-endfunction
-vnoremap <leader>a :call AlignTable()<cr>
-nnoremap <leader>A Vi(:call AlignTable()<cr>
 
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'rg --no-heading --column'
