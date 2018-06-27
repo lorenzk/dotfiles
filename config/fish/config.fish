@@ -11,6 +11,7 @@ alias la "l -a"
 alias vi nvim
 
 abbr be bundle exec
+abbr gap git add -p
 abbr gb git branch
 abbr gco git checkout
 abbr gd git diff
