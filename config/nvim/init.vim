@@ -9,9 +9,10 @@ endif
 source ~/.config/nvim/autoload/plug.vim
 call plug#begin('~/.config/nvim/plugged')
 
+" Plug 'airblade/vim-gitgutter'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
@@ -35,8 +36,8 @@ Plug 'AndrewRadev/sideways.vim'
 nnoremap <c-h> :SidewaysLeft<cr>
 nnoremap <c-l> :SidewaysRight<cr>
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" let g:deoplete#enable_at_startup = 1
 
 Plug 'elmcast/elm-vim'
 let g:elm_format_autosave = 1
@@ -135,7 +136,7 @@ if has('autocmd')
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+  " autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
   autocmd filetype crontab setlocal nobackup nowritebackup
 endif
 
@@ -175,6 +176,7 @@ set wildignore+=js-build/**
 set wildignore+=log
 set wildignore+=node_modules
 set wildignore+=tmp
+set wildignore+=.keep
 let g:ctrlp_user_command = ['.git', 'cd %s; and git ls-files -co --exclude-standard']
 
 " Write with sudo (because I always forget using visudo)
@@ -219,8 +221,10 @@ set undoreload=10000    " number of lines to save for undo
 :nnoremap <A-k> <C-w>k
 :nnoremap <A-l> <C-w>l
 
-
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
       \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
       \,sm:block-blinkwait175-blinkoff150-blinkon175
-inoremap kj <esc>
+
+" a little less right hand acrobatics to help with RSI
+:nnoremap <space> :
+:inoremap kj <Esc>
