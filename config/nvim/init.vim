@@ -20,6 +20,7 @@ Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
 Plug 'lmeijvogel/vim-yaml-helper'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
+Plug 'posva/vim-vue'
 Plug 'slim-template/vim-slim'
 Plug 'tomtom/tcomment_vim'              " use 'gc' to comment out code
 Plug 'tpope/vim-bundler'
