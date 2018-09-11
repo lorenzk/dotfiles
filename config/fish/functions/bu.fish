@@ -4,5 +4,4 @@ function bu
   brew cask upgrade
   brew cleanup
   # brew doctor
-  brew cask cleanup
 end
