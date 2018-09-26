@@ -16,7 +16,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
-Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
 Plug 'lmeijvogel/vim-yaml-helper'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
@@ -65,8 +64,7 @@ let g:dash_map = { 'ruby': 'rails' }
 :nmap <silent> <leader>d <Plug>DashSearch
 
 Plug 'janko-m/vim-test'
-let g:neoterm_size=10
-let test#strategy = "neoterm"
+let test#strategy = "neovim"
 let test#ruby#minitest#executable = 'rake test'
 nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
