@@ -1,4 +1,4 @@
-set PATH $PATH
+set PATH ~/bin $PATH
 # rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
@@ -11,13 +11,33 @@ alias la "l -a"
 alias vi nvim
 
 abbr be bundle exec
+abbr ga git add
 abbr gap git add -p
 abbr gb git branch
+abbr gc git commit
+abbr gca git commit -a
+abbr gcaa git commit -a --amend
+abbr gcam git commit -am
+abbr gcm git commit -m
 abbr gco git checkout
+abbr gcom git checkout master
+abbr gcop git checkout -p
+abbr gcp git cherry-pick
 abbr gd git diff
+abbr gdc git diff --cached
+abbr glg "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+abbr gmm git merge master
+abbr gmt git mergetool
 abbr gpl git pull
+abbr gplr git pull --rebase
 abbr gps git push
-abbr gs git st
+abbr gpsr git push redesign redesign:master
+abbr gr git revert
+abbr grpo git remote prune origin
+abbr gs git status -sb
+abbr gsh git stash
+abbr gshp git stash pop
+abbr gst git status -sb
 
 set -x EDITOR nvim
 set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'

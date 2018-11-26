@@ -229,4 +229,3 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
 
 " a little less right hand acrobatics to help with RSI
 :nnoremap <space> :
-:inoremap kj <Esc>
