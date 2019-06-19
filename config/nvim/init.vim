@@ -51,7 +51,7 @@ nnoremap <leader>b :Buffers<CR>
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'rg --no-heading --column'
 map <C-F> :Ack!<space>
-vnoremap <C-F> y:Ack! <C-r>=fnameescape(@")<CR>
+vnoremap <C-F> y:Ack! "<C-r>=fnameescape(@")<CR>"
 
 Plug 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
