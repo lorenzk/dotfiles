@@ -38,6 +38,7 @@ abbr gs git status -sb
 abbr gsh git stash
 abbr gshp git stash pop
 abbr gst git status -sb
+abbr hpr hub pull-request
 
 set -x EDITOR nvim
 set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
