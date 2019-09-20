@@ -29,6 +29,7 @@ Plug 'tpope/vim-fugitive'               " git
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'wavded/vim-stylus'
@@ -90,8 +91,6 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 call plug#end()
 
 set number
-set ruler
-syntax on
 
 " use MacOS clipboard
 " set clipboard=unnamed
@@ -111,11 +110,9 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set list listchars=nbsp:•,tab:\ \ ,extends:»,precedes:«,trail:·
 
 " Searching
 set hlsearch
-set incsearch
 set ignorecase
 set smartcase
 
@@ -125,9 +122,6 @@ set icm=split
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.png,*.jpg,*.gif,build,*.min.js
-
-" Status bar
-set laststatus=2
 
 " Remember last location in file
 if has('autocmd')
@@ -153,9 +147,6 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Capfile,c
 au BufRead,BufNewFile *.{thor,sinew,jbuilder} set ft=ruby
 au BufRead,BufNewFile *.slim set ft=slim
 au BufRead,BufNewFile *.{es6,jsx} set ft=javascript
-
-" load the plugin and indent settings for the detected filetype
-filetype plugin indent on
 
 " I play around with this a lot and don't want it in my git history
 source $HOME/.config/nvim/colorscheme.vim
