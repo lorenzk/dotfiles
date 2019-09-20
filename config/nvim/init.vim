@@ -58,8 +58,8 @@ Plug 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
 Plug 'sbdchd/neoformat'
-autocmd BufWritePre *.js* Neoformat
-autocmd FileType javascript set formatprg=prettier\ --stdin
+autocmd BufWritePre *.js* Neoformat prettier
+autocmd BufWritePre *.vue Neoformat prettier
 
 Plug 'rizzatti/dash.vim'
 let g:dash_map = { 'ruby': 'rails' }
