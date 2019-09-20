@@ -70,6 +70,7 @@ let g:neoterm_size=15
 let g:neoterm_default_mod="botright"
 let test#strategy = "neoterm"
 let test#ruby#minitest#executable = 'rake test'
+let test#ruby#rspec#options = '--fail-fast'
 nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
@@ -79,7 +80,6 @@ nmap <silent> <leader>g :TestVisit<CR>
 Plug 'benekastah/neomake'
 autocmd! BufWritePost * Neomake
 let g:vimrubocop_extra_args='-D'
-let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 
 Plug 'ngmy/vim-rubocop'
 nmap <Leader>c :RuboCop -a<CR>
