@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Plug 'airblade/vim-gitgutter'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'benekastah/neomake'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
@@ -19,7 +20,9 @@ Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
 Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
 Plug 'lmeijvogel/vim-yaml-helper'
+Plug 'mattn/emmet-vim'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
+Plug 'othree/html5.vim'
 Plug 'posva/vim-vue'
 Plug 'slim-template/vim-slim'
 Plug 'tomtom/tcomment_vim'              " use 'gc' to comment out code
@@ -33,6 +36,10 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'wavded/vim-stylus'
+
+Plug 'stefanoverna/vim-i18n'
+vmap <Leader>z :call I18nTranslateString()<CR>
+vmap <Leader>it :call I18nDisplayTranslation()<CR>
 
 Plug 'AndrewRadev/sideways.vim'
 nnoremap <c-h> :SidewaysLeft<cr>
@@ -58,37 +65,39 @@ Plug 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
 Plug 'sbdchd/neoformat'
-autocmd BufWritePre *.js* Neoformat prettier
-autocmd BufWritePre *.vue Neoformat prettier
+let g:neoformat_enabled_ruby = ['rufo']
+let g:neoformat_enabled_javascript = ['prettier', 'prettydiff', 'clang-format', 'esformatter', 'prettier-eslint', 'eslint_d', 'standard']
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * Neoformat
+augroup END
 
 Plug 'rizzatti/dash.vim'
 let g:dash_map = { 'ruby': 'rails' }
 :nmap <silent> <leader>d <Plug>DashSearch
 
 Plug 'janko-m/vim-test'
-let g:neoterm_size=15
 let g:neoterm_default_mod="botright"
-let test#strategy = "neoterm"
-let test#ruby#minitest#executable = 'rake test'
-let test#ruby#rspec#options = '--fail-fast'
+let g:neoterm_size=15
+let g:test#strategy = "neoterm"
 nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-Plug 'benekastah/neomake'
-autocmd! BufWritePost * Neomake
-let g:vimrubocop_extra_args='-D'
-
 Plug 'ngmy/vim-rubocop'
-nmap <Leader>c :RuboCop -a<CR>
+let g:vimrubocop_extra_args='--display-cop-names'
+nmap <Leader>c :RuboCop --auto-correct --display-style-guide<CR>
 
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 call plug#end()
+
+" Neomake config. Must be after plug#end
+call neomake#configure#automake('nrwi', 500)
 
 set number
 
@@ -103,6 +112,8 @@ nmap <leader>et :e ~/Dropbox/todo.txt<CR>
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>r :source $MYVIMRC<CR>
 nmap <leader>y :!yml-sorter -i % -o %<CR>
+vnoremap <leader>s d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
+imap <leader>cl console.log("ASDF", );<Left><Left>
 
 " Whitespace stuff
 set nowrap
@@ -128,7 +139,7 @@ if has('autocmd')
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
         \| exe "normal g'\"" | endif
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType html,markdown,vue setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
@@ -143,7 +154,7 @@ if has('autocmd') && exists('+omnifunc')
         \	endif 
 endif 
 
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Capfile,config.ru} set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Capfile,Fastfile,Matchfile,config.ru} set ft=ruby
 au BufRead,BufNewFile *.{thor,sinew,jbuilder} set ft=ruby
 au BufRead,BufNewFile *.slim set ft=slim
 au BufRead,BufNewFile *.{es6,jsx} set ft=javascript
@@ -225,3 +236,6 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
 nnoremap Q @@
 
 set lazyredraw " do not redraw in between macro steps
+
+let g:python_host_prog  = '/usr/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3.9'
