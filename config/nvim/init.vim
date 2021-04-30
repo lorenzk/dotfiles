@@ -36,6 +36,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'wavded/vim-stylus'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'stefanoverna/vim-i18n'
 vmap <Leader>z :call I18nTranslateString()<CR>
