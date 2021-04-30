@@ -3,6 +3,7 @@
 SETUVAR __fish_classic_git_prompt_initialized:\x1d
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
+SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_be:bundle\x20exec
 SETUVAR _fish_abbr_ga:git\x20add
 SETUVAR _fish_abbr_gap:git\x20add\x20\x2dp
@@ -35,8 +36,12 @@ SETUVAR _fish_abbr_gsp:git\x20stash\x20pop
 SETUVAR _fish_abbr_gst:git\x20status\x20\x2dsb
 SETUVAR _fish_abbr_gup:git\x20pull\x20\x2d\x2dff\x2donly
 SETUVAR _fish_abbr_hpr:hub\x20pull\x2drequest
+SETUVAR _fish_abbr_mux:tmuxinator
+SETUVAR _fish_abbr_rdm:bin/rails\x20db\x3amigrate
+SETUVAR _fish_abbr_rdr:bin/rails\x20db\x3arollback
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_host:\x2do\x1ecyan
+SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:\x2do\x1egreen
 SETUVAR fish_greeting:\x1d

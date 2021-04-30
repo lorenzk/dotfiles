@@ -3,7 +3,7 @@ set PATH ~/bin $PATH
 status --is-interactive; and source (rbenv init -|psub)
 
 # autojump
-test -f /usr/local/share/autojump/autojump.fish; and . /usr/local/share/autojump/autojump.fish
+[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 alias grep "grep --color=auto"
 alias l "ls -oF"
@@ -39,8 +39,11 @@ abbr gsh git stash
 abbr gshp git stash pop
 abbr gst git status -sb
 abbr hpr hub pull-request
+abbr rdm bin/rails db:migrate
+abbr rdr bin/rails db:rollback
 
 set -x EDITOR nvim
+set -x MAKE "make --jobs 4"
 set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
 set fish_greeting
 set fish_color_autosuggestion 586e75
