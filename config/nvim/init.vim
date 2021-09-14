@@ -23,6 +23,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'lmeijvogel/vim-yaml-helper'
 Plug 'mattn/emmet-vim'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'othree/html5.vim'
 Plug 'posva/vim-vue'
 Plug 'slim-template/vim-slim'
