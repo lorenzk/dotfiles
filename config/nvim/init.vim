@@ -97,6 +97,7 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 call plug#end()
 
 " Neomake config. Must be after plug#end
+let g:neomake_html_enabled_makers = []
 call neomake#configure#automake('nrwi', 500)
 
 set relativenumber
