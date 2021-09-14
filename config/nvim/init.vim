@@ -157,7 +157,7 @@ if has('autocmd') && exists('+omnifunc')
 endif 
 
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Capfile,Fastfile,Matchfile,config.ru} set ft=ruby
-au BufRead,BufNewFile *.{thor,sinew,jbuilder} set ft=ruby
+au BufRead,BufNewFile *.{axlsx,thor,sinew,jbuilder} set ft=ruby
 au BufRead,BufNewFile *.slim set ft=slim
 au BufRead,BufNewFile *.{es6,jsx} set ft=javascript
 
