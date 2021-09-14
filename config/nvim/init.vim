@@ -9,8 +9,8 @@ endif
 source ~/.config/nvim/autoload/plug.vim
 call plug#begin('~/.config/nvim/plugged')
 
-" Plug 'airblade/vim-gitgutter'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'benekastah/neomake'
 Plug 'junegunn/goyo.vim'
