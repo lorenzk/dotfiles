@@ -40,6 +40,19 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'wavded/vim-stylus'
 
+" For clojure
+Plug 'guns/vim-clojure-highlight'
+Plug 'guns/vim-clojure-static'
+Plug 'luochen1990/rainbow'
+
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
+Plug 'Olical/conjure'
+Plug 'tpope/vim-dispatch'
+Plug 'radenling/vim-dispatch-neovim'
+Plug 'clojure-vim/vim-jack-in'
+
 Plug 'stefanoverna/vim-i18n'
 vmap <Leader>z :call I18nTranslateString()<CR>
 vmap <Leader>it :call I18nDisplayTranslation()<CR>
