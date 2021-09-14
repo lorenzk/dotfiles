@@ -13,6 +13,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'benekastah/neomake'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
@@ -36,7 +37,6 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'wavded/vim-stylus'
-Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'stefanoverna/vim-i18n'
 vmap <Leader>z :call I18nTranslateString()<CR>
