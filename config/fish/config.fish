@@ -1,6 +1,6 @@
 set PATH ~/bin $PATH
-# rbenv
-status --is-interactive; and source (rbenv init -|psub)
+# jenv
+status --is-interactive; and source (jenv init -|psub)
 
 # autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
@@ -73,3 +73,4 @@ set fish_pager_color_prefix cyan
 set fish_pager_color_progress cyan
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+fish_add_path /usr/local/opt/openjdk/bin
