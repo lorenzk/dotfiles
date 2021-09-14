@@ -74,3 +74,5 @@ set fish_pager_color_progress cyan
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 fish_add_path /usr/local/opt/openjdk/bin
+
+source /usr/local/opt/asdf/asdf.fish
