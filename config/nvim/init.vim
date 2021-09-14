@@ -101,7 +101,7 @@ call plug#end()
 " Neomake config. Must be after plug#end
 call neomake#configure#automake('nrwi', 500)
 
-set number
+set relativenumber
 
 " use MacOS clipboard
 " set clipboard=unnamed
