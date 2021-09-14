@@ -26,6 +26,7 @@ Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
 Plug 'othree/html5.vim'
 Plug 'posva/vim-vue'
 Plug 'slim-template/vim-slim'
+Plug 'tommcdo/vim-exchange'
 Plug 'tomtom/tcomment_vim'              " use 'gc' to comment out code
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'                " inserts 'end' in ruby
