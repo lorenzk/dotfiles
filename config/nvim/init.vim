@@ -91,7 +91,7 @@ Plug 'rizzatti/dash.vim'
 let g:dash_map = { 'ruby': 'rails' }
 :nmap <silent> <leader>d <Plug>DashSearch
 
-Plug 'janko-m/vim-test'
+Plug 'vim-test/vim-test'
 let g:neoterm_default_mod="botright"
 let g:neoterm_size=15
 let g:test#strategy = "neoterm"
