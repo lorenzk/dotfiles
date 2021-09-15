@@ -78,6 +78,7 @@ Plug 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
 Plug 'sbdchd/neoformat'
+let g:neoformat_try_node_exe = 1
 let g:neoformat_enabled_javascript = ['prettier', 'prettydiff', 'clang-format', 'esformatter', 'prettier-eslint', 'eslint_d', 'standard']
 let g:neoformat_enabled_ruby = ['rufo']
 let g:neoformat_enabled_vue = ['prettier', 'prettier-eslint']
