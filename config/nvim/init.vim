@@ -45,14 +45,15 @@ Plug 'wavded/vim-stylus'
 Plug 'guns/vim-clojure-highlight'
 Plug 'guns/vim-clojure-static'
 Plug 'luochen1990/rainbow'
-
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
-
 Plug 'Olical/conjure'
 Plug 'tpope/vim-dispatch'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'clojure-vim/vim-jack-in'
+
+Plug 'kdheepak/lazygit.nvim'
+nnoremap <silent> <leader>gg :LazyGit<CR>
 
 Plug 'stefanoverna/vim-i18n'
 vmap <Leader>z :call I18nTranslateString()<CR>
