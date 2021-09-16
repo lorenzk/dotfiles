@@ -22,6 +22,7 @@ Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
 Plug 'lmeijvogel/vim-yaml-helper'
 Plug 'mattn/emmet-vim'
+Plug 'michaeljsmith/vim-indent-object'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'othree/html5.vim'
