@@ -94,6 +94,7 @@ let g:dash_map = { 'ruby': 'rails' }
 Plug 'vim-test/vim-test'
 let g:neoterm_default_mod="botright"
 let g:neoterm_size=15
+let g:test#javascript#runner='jest'
 let g:test#strategy = "neoterm"
 nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
