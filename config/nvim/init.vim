@@ -177,8 +177,7 @@ au BufRead,BufNewFile *.{axlsx,thor,sinew,jbuilder} set ft=ruby
 au BufRead,BufNewFile *.slim set ft=slim
 au BufRead,BufNewFile *.{es6,jsx} set ft=javascript
 
-" I play around with this a lot and don't want it in my git history
-source $HOME/.config/nvim/colorscheme.vim
+colo default
 
 " Show (partial) command in the status line
 set showcmd
