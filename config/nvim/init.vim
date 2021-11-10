@@ -65,7 +65,7 @@ nnoremap <c-l> :SidewaysRight<cr>
 Plug 'elmcast/elm-vim'
 let g:elm_format_autosave = 1
 
-Plug '/usr/local/opt/fzf'
+Plug '/opt/homebrew/opt/fzf'
 Plug 'junegunn/fzf.vim'
 nnoremap <c-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>

@@ -1,9 +1,7 @@
 set PATH ~/bin $PATH
-# jenv
-status --is-interactive; and source (jenv init -|psub)
 
 # autojump
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+[ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
 
 alias grep "grep --color=auto"
 alias l "ls -oF"
@@ -73,6 +71,9 @@ set fish_pager_color_prefix cyan
 set fish_pager_color_progress cyan
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
-fish_add_path /usr/local/opt/openjdk/bin
+fish_add_path /opt/homebrew/opt/openjdk/bin
 
-source /usr/local/opt/asdf/asdf.fish
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
+fish_add_path /opt/homebrew/bin
+
+direnv hook fish | source
