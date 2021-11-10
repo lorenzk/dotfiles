@@ -118,7 +118,7 @@ let g:neomake_html_enabled_makers = []
 call neomake#configure#automake('nrwi', 500)
 
 set relativenumber
-set number # show absolute line number for current line
+set number " show absolute line number for current line
 
 " use MacOS clipboard
 " set clipboard=unnamed
