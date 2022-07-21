@@ -13,21 +13,19 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'benekastah/neomake'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
 Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
-Plug 'lmeijvogel/vim-yaml-helper'
 Plug 'mattn/emmet-vim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'othree/html5.vim'
 Plug 'posva/vim-vue'
+Plug 'preservim/vim-colors-pencil'
 Plug 'slim-template/vim-slim'
-Plug 'tommcdo/vim-exchange'
 Plug 'tomtom/tcomment_vim'              " use 'gc' to comment out code
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'                " inserts 'end' in ruby
@@ -40,16 +38,9 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'wavded/vim-stylus'
 
-" For clojure
-Plug 'guns/vim-clojure-highlight'
-Plug 'guns/vim-clojure-static'
-Plug 'luochen1990/rainbow'
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'Olical/conjure'
-Plug 'tpope/vim-dispatch'
-Plug 'radenling/vim-dispatch-neovim'
-Plug 'clojure-vim/vim-jack-in'
+" Exchange bits with cx{motion}
+" https://github.com/tommcdo/vim-exchange
+Plug 'tommcdo/vim-exchange'
 
 Plug 'kdheepak/lazygit.nvim'
 nnoremap <silent> <leader>gg :LazyGit<CR>
@@ -61,9 +52,6 @@ vmap <Leader>it :call I18nDisplayTranslation()<CR>
 Plug 'AndrewRadev/sideways.vim'
 nnoremap <c-h> :SidewaysLeft<cr>
 nnoremap <c-l> :SidewaysRight<cr>
-
-Plug 'elmcast/elm-vim'
-let g:elm_format_autosave = 1
 
 Plug '/opt/homebrew/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -94,9 +82,10 @@ let g:dash_map = { 'ruby': 'rails' }
 
 Plug 'vim-test/vim-test'
 let g:neoterm_default_mod="botright"
-let g:neoterm_size=15
+let g:neoterm_size=22
 let g:test#javascript#runner='jest'
-let g:test#strategy = "neoterm"
+" let g:test#ruby#rails#options='--fail-fast'
+let g:test#strategy="neoterm" " neoterm/dispatch
 nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
@@ -178,7 +167,10 @@ au BufRead,BufNewFile *.{axlsx,thor,sinew,jbuilder} set ft=ruby
 au BufRead,BufNewFile *.slim set ft=slim
 au BufRead,BufNewFile *.{es6,jsx} set ft=javascript
 
-colo default
+colorscheme default
+colorscheme pencil
+
+source ~/.config/nvim/colo.vim
 
 " Show (partial) command in the status line
 set showcmd
@@ -255,5 +247,6 @@ nnoremap Q @@
 
 set lazyredraw " do not redraw in between macro steps
 
-let g:python_host_prog  = '/usr/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3.9'
+nnoremap <leader>x :!%:p<Enter>
+vnoremap <leader>o c<C-R>=system('ruby -ractive_support/inflector -e "print STDIN.read.camelize"', getreg('"'))<CR><esc>
+vnoremap <leader>i c<C-R>=system('ruby -ractive_support/inflector -e "print STDIN.read.underscore"', getreg('"'))<CR><esc>
