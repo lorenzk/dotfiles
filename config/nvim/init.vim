@@ -12,7 +12,10 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'benekastah/neomake'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'github/copilot.vim'
+Plug 'henrik/vim-yaml-helper'
 Plug 'junegunn/vim-easy-align'
 Plug 'jwhitley/vim-matchit'             " use '%' to move to opposite match
 Plug 'kana/vim-textobj-user'            " dependency for vim-textobj-rubyblock
@@ -21,16 +24,14 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'nelstrom/vim-textobj-rubyblock'   " use 'var' to mark ruby block
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'othree/html5.vim'
 Plug 'posva/vim-vue'
-Plug 'preservim/vim-colors-pencil'
 Plug 'slim-template/vim-slim'
 Plug 'tomtom/tcomment_vim'              " use 'gc' to comment out code
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'                " inserts 'end' in ruby
 Plug 'tpope/vim-fugitive'               " git
-Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
@@ -42,6 +43,9 @@ Plug 'wavded/vim-stylus'
 " https://github.com/tommcdo/vim-exchange
 Plug 'tommcdo/vim-exchange'
 
+Plug 'tpope/vim-ragtag'                 " close tags with CTRL+X /
+let g:ragtag_global_maps = 1
+
 Plug 'kdheepak/lazygit.nvim'
 nnoremap <silent> <leader>gg :LazyGit<CR>
 
@@ -49,14 +53,15 @@ Plug 'stefanoverna/vim-i18n'
 vmap <Leader>z :call I18nTranslateString()<CR>
 vmap <Leader>it :call I18nDisplayTranslation()<CR>
 
-Plug 'AndrewRadev/sideways.vim'
-nnoremap <c-h> :SidewaysLeft<cr>
-nnoremap <c-l> :SidewaysRight<cr>
+" Plug 'AndrewRadev/sideways.vim'
+" nnoremap <c-h> :SidewaysLeft<cr>
+" nnoremap <c-l> :SidewaysRight<cr>
 
 Plug '/opt/homebrew/opt/fzf'
 Plug 'junegunn/fzf.vim'
+nnoremap <c-b> :Buffers<CR>
+nnoremap <c-h> :History:<CR>
 nnoremap <c-p> :Files<CR>
-nnoremap <leader>b :Buffers<CR>
 
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'rg --no-heading --column'
@@ -66,15 +71,30 @@ vnoremap <C-F> y:Ack! "<C-r>=fnameescape(@")<CR>"
 Plug 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
-Plug 'sbdchd/neoformat'
-let g:neoformat_try_node_exe = 1
-let g:neoformat_enabled_javascript = ['prettier', 'prettydiff', 'clang-format', 'esformatter', 'prettier-eslint', 'eslint_d', 'standard']
-let g:neoformat_enabled_ruby = ['rufo']
-let g:neoformat_enabled_vue = ['prettier', 'prettier-eslint']
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * Neoformat
-augroup END
+Plug 'dense-analysis/ale'
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\   'json': ['jq'],
+\   'ruby': ['rubocop'],
+\}
+let g:ale_fixers = {
+\   'html': ['prettier'],
+\   'javascript': ['standard'],
+\   'json': ['jq'],
+\   'ruby': ['rufo'],
+\   'yaml': ['yamlfix'],
+\}
+" Plug 'sbdchd/neoformat'
+" let g:neoformat_try_node_exe = 1
+" let g:neoformat_enabled_javascript = ['standard']
+" let g:neoformat_enabled_ruby = ['rufo']
+" let g:neoformat_enabled_vue = ['prettier', 'prettier-eslint']
+" augroup fmt
+"   autocmd!
+"   autocmd BufWritePre * Neoformat
+" augroup END
 
 Plug 'rizzatti/dash.vim'
 let g:dash_map = { 'ruby': 'rails' }
@@ -84,7 +104,7 @@ Plug 'vim-test/vim-test'
 let g:neoterm_default_mod="botright"
 let g:neoterm_size=22
 let g:test#javascript#runner='jest'
-" let g:test#ruby#rails#options='--fail-fast'
+let g:test#ruby#rails#options='--fail-fast'
 let g:test#strategy="neoterm" " neoterm/dispatch
 nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
@@ -94,10 +114,11 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 Plug 'ngmy/vim-rubocop'
 let g:vimrubocop_extra_args='--display-cop-names'
-nmap <Leader>c :RuboCop --auto-correct --display-style-guide<CR>
+nmap <Leader>c :RuboCop --autocorrect --display-style-guide<CR>
 
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte'
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 call plug#end()
@@ -106,7 +127,6 @@ call plug#end()
 let g:neomake_html_enabled_makers = []
 call neomake#configure#automake('nrwi', 500)
 
-set relativenumber
 set number " show absolute line number for current line
 
 " use MacOS clipboard
@@ -151,7 +171,7 @@ if has('autocmd')
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  " autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
   autocmd filetype crontab setlocal nobackup nowritebackup
 endif
 
@@ -162,15 +182,19 @@ if has('autocmd') && exists('+omnifunc')
         \	endif 
 endif 
 
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Capfile,Fastfile,Matchfile,config.ru} set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,Capfile,Fastfile,Matchfile,Clockfile,config.ru} set ft=ruby
 au BufRead,BufNewFile *.{axlsx,thor,sinew,jbuilder} set ft=ruby
 au BufRead,BufNewFile *.slim set ft=slim
 au BufRead,BufNewFile *.{es6,jsx} set ft=javascript
 
 colorscheme default
-colorscheme pencil
+set notermguicolors
+" highlight Search ctermfg=0
+
+let &t_ut=''
 
 source ~/.config/nvim/colo.vim
+highlight Search ctermbg=221
 
 " Show (partial) command in the status line
 set showcmd
