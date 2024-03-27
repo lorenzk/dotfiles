@@ -15,9 +15,23 @@
   prompt = false
 [mergetool "vimdiff"]
   cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+# [difftool]
+#   prompt = false
+# [diff]
+#   tool = vimdiff
+# [pager]
+# 	branch = false
+[diff]
+  tool = difftastic
 [difftool]
   prompt = false
-[diff]
-  tool = vimdiff
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
 [pager]
-	branch = false
+  difftool = true
+
+[hub]
+	protocol = https
+[alias]
+	prune-branches = !git remote prune origin && git branch -vv | grep '"'"': gone]'"'"' | awk '"'"'{print $1}'"'"' | ifne xargs git branch -d
