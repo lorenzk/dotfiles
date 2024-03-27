@@ -23,6 +23,7 @@ abbr gcop git checkout -p
 abbr gcp git cherry-pick
 abbr gd git diff
 abbr gdc git diff --cached
+abbr gdt git difftool
 abbr glg "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 abbr gmm git merge master
 abbr gmt git mergetool
@@ -70,10 +71,12 @@ set fish_pager_color_description 555\x1eyellow
 set fish_pager_color_prefix cyan
 set fish_pager_color_progress cyan
 
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 fish_add_path /opt/homebrew/opt/openjdk/bin
+fish_add_path /opt/homebrew/opt/postgresql@15/bin
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
 fish_add_path /opt/homebrew/bin
+fish_add_path /Users/lorenz/.local/bin
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 direnv hook fish | source

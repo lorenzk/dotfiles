@@ -1,1 +1,1 @@
-/opt/homebrew/opt/fzf/shell/key-bindings.fish
+/Users/lorenz/.config/nvim/plugged/fzf/shell/key-bindings.fish
