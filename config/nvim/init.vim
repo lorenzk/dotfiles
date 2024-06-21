@@ -187,7 +187,7 @@ au BufRead,BufNewFile *.{axlsx,thor,sinew,jbuilder} set ft=ruby
 au BufRead,BufNewFile *.slim set ft=slim
 au BufRead,BufNewFile *.{es6,jsx} set ft=javascript
 
-colorscheme default
+colorscheme vim " neovims new 'default' scheme breaks solarized
 set notermguicolors
 " highlight Search ctermfg=0
 

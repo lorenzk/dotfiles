@@ -1,1 +1,1 @@
-/Users/lorenz/.config/nvim/colo-dark.vim
+/Users/lorenz/.config/nvim/colo-light.vim
