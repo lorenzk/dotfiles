@@ -18,19 +18,18 @@ abbr gcaa git commit -a --amend
 abbr gcam git commit -am
 abbr gcm git commit -m
 abbr gco git checkout
-abbr gcom git checkout master
+abbr gcom git checkout main
 abbr gcop git checkout -p
 abbr gcp git cherry-pick
 abbr gd git diff
 abbr gdc git diff --cached
 abbr gdt git difftool
 abbr glg "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-abbr gmm git merge master
+abbr gmm git merge main
 abbr gmt git mergetool
 abbr gpl git pull
 abbr gplr git pull --rebase
 abbr gps git push
-abbr gpsr git push redesign redesign:master
 abbr gr git revert
 abbr grpo git remote prune origin
 abbr gs git status -sb
@@ -42,7 +41,6 @@ abbr rdm bin/rails db:migrate
 abbr rdr bin/rails db:rollback
 
 set -x EDITOR nvim
-set -x MAKE "make --jobs 4"
 set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
 set fish_greeting
 set fish_color_autosuggestion 586e75
@@ -73,10 +71,9 @@ set fish_pager_color_progress cyan
 
 test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 fish_add_path /opt/homebrew/opt/openjdk/bin
-fish_add_path /opt/homebrew/opt/postgresql@15/bin
+fish_add_path /opt/homebrew/opt/postgresql@16/bin
 
 fish_add_path /opt/homebrew/bin
 fish_add_path /Users/lorenz/.local/bin
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 direnv hook fish | source
