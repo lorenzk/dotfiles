@@ -1,8 +1,5 @@
 set PATH ~/bin $PATH
 
-# autojump
-[ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
-
 alias grep "grep --color=auto"
 alias l "ls -oF"
 alias la "l -a"
