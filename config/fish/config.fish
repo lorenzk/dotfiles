@@ -20,6 +20,7 @@ abbr gcop git checkout -p
 abbr gcp git cherry-pick
 abbr gd git diff
 abbr gdc git diff --cached
+abbr gdm git diff main
 abbr gdt git difftool
 abbr glg "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 abbr gmm git merge main
@@ -33,6 +34,7 @@ abbr gs git status -sb
 abbr gsh git stash
 abbr gshp git stash pop
 abbr gst git status -sb
+abbr gsw git switch
 abbr hpr hub pull-request
 abbr rdm bin/rails db:migrate
 abbr rdr bin/rails db:rollback
