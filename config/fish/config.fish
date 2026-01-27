@@ -69,36 +69,47 @@ set fish_pager_color_description 555\x1eyellow
 set fish_pager_color_prefix cyan
 set fish_pager_color_progress cyan
 
-test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
-fish_add_path /opt/homebrew/opt/openjdk/bin
-fish_add_path /opt/homebrew/opt/postgresql@16/bin
-
-fish_add_path /opt/homebrew/bin
+# ===== Cross-platform tool initialization =====
 fish_add_path /Users/lorenz/.local/bin
-fish_add_path (brew --prefix python)/libexec/bin
 
-direnv hook fish | source
-zoxide init fish | source
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-
-if status is-interactive
-  atuin init --disable-up-arrow fish | source
+if type -q direnv
+    direnv hook fish | source
 end
 
-# Added by Antigravity
-fish_add_path /Users/lorenz/.antigravity/antigravity/bin
+if type -q zoxide
+    zoxide init fish | source
+end
 
-# Added by Antigravity
-fish_add_path /Users/lorenz/.antigravity/antigravity/bin
+if status is-interactive
+    if type -q atuin
+        atuin init fish --disable-up-arrow | source
+    end
+end
 
-# Claude Code Orchestrator
-alias wt='~/.claude/scripts/wt.sh'
-alias workers='~/.claude/scripts/orchestrator.sh'
-alias orchestrator-start='~/.claude/scripts/orchestrator-loop.sh &'
-alias orchestrator-stop='~/.claude/scripts/orchestrator-stop.sh'
-alias orchestrator-status='~/.claude/scripts/orchestrator-status.sh'
-alias claude-orchestrator='~/.claude/scripts/claude-orchestrator'
+# ===== macOS-specific settings =====
+if test (uname) = "Darwin"
+    # iTerm2 integration
+    test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
+
+    # Homebrew paths
+    fish_add_path /opt/homebrew/bin
+    fish_add_path /opt/homebrew/opt/openjdk/bin
+    fish_add_path /opt/homebrew/opt/postgresql@16/bin
+    fish_add_path (brew --prefix python)/libexec/bin
+
+    # Bun (desktop dev only)
+    set -gx BUN_INSTALL "$HOME/.bun"
+    fish_add_path $BUN_INSTALL/bin
+
+    # Added by Antigravity
+    fish_add_path /Users/lorenz/.antigravity/antigravity/bin
+
+    # Claude Code Orchestrator
+    alias wt='~/.claude/scripts/wt.sh'
+    alias workers='~/.claude/scripts/orchestrator.sh'
+    alias orchestrator-start='~/.claude/scripts/orchestrator-loop.sh &'
+    alias orchestrator-stop='~/.claude/scripts/orchestrator-stop.sh'
+    alias orchestrator-status='~/.claude/scripts/orchestrator-status.sh'
+    alias claude-orchestrator='~/.claude/scripts/claude-orchestrator'
+end
 
