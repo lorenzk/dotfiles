@@ -38,6 +38,7 @@ abbr gsw git switch
 abbr hpr hub pull-request
 abbr rdm bin/rails db:migrate
 abbr rdr bin/rails db:rollback
+abbr rt "bin/rails test; beep"
 
 set -x EDITOR nvim
 set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
@@ -74,5 +75,30 @@ fish_add_path /opt/homebrew/opt/postgresql@16/bin
 
 fish_add_path /opt/homebrew/bin
 fish_add_path /Users/lorenz/.local/bin
+fish_add_path (brew --prefix python)/libexec/bin
 
 direnv hook fish | source
+zoxide init fish | source
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+if status is-interactive
+  atuin init --disable-up-arrow fish | source
+end
+
+# Added by Antigravity
+fish_add_path /Users/lorenz/.antigravity/antigravity/bin
+
+# Added by Antigravity
+fish_add_path /Users/lorenz/.antigravity/antigravity/bin
+
+# Claude Code Orchestrator
+alias wt='~/.claude/scripts/wt.sh'
+alias workers='~/.claude/scripts/orchestrator.sh'
+alias orchestrator-start='~/.claude/scripts/orchestrator-loop.sh &'
+alias orchestrator-stop='~/.claude/scripts/orchestrator-stop.sh'
+alias orchestrator-status='~/.claude/scripts/orchestrator-status.sh'
+alias claude-orchestrator='~/.claude/scripts/claude-orchestrator'
+

@@ -1,6 +1,6 @@
 function bu
   brew update
-  brew upgrade
+  brew upgrade --greedy
   brew cleanup
   # brew doctor
 end
